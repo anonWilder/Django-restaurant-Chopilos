@@ -6,6 +6,35 @@ from django.shortcuts import reverse
 from django_countries.fields import CountryField
 from users.models import Profile as profile
 
+#New model configurations by kenechukwu
+
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # CATEGORY_CHOICES = (
 #     ('S', 'Shirt'),
