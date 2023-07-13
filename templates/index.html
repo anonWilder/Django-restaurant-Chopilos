@@ -154,33 +154,16 @@
                     to ensure excellent services at all times.</div>
             </div>
             <div class="row justify-content-center clearfix">
+                {% for section in offer_sections %}
                 <!--Block-->
                 <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <div class="image"><a href="/menu/"><img src="{% static 'images/food.jpg' %}" alt=""></a></div>
-                        <h3><a href="menu-list.html">BREAKFAST</a></h3>
+                        <div class="image"><a href="/menu/"><img src="{{ section.image.url }}" alt=""></a></div>
+                        <h3><a href="menu-list.html">{{ section.name }}</a></h3>
                         <div class="more-link"><a href="/menu/">view menu</a></div>
                     </div>
                 </div>
-
-                <!--Block-->
-                <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
-                        <div class="image"><a href="/menu/"><img src="{% static 'images/special.jpg' %}" alt=""></a></div>
-                        <h3><a href="menu-list.html">SPECIAL</a></h3>
-                        <div class="more-link"><a href="/menu/">view menu</a></div>
-                    </div>
-                </div>
-
-                <!--Block-->
-                <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
-                        <div class="image"><a href="/menu/"><img src="{% static 'images/drink.jpg' %}" alt=""></a></div>
-                        <h3><a href="/menu/">DRINKS</a></h3>
-                        <div class="more-link"><a href="/menu/">view menu</a></div>
-                    </div>
-                </div>
-
+                {% endfor %}
             </div>
         </div>
     </section>

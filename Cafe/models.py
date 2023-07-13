@@ -8,7 +8,11 @@ from users.models import Profile as profile
 
 #New model configurations by kenechukwu
 
-#
+#INDEX PAGE OFFER SECTION
+class OfferSection(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='offer_images/')
+#END
 
 
 

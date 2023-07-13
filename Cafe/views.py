@@ -18,7 +18,8 @@ from django.template.loader import render_to_string
 from django.conf import settings
 from django.core.mail import EmailMessage
 from django.core.mail import send_mail
-
+from django.views import View
+from .models import OfferSection
 import random
 import string
 # import Paystack
@@ -345,23 +346,45 @@ class BarView(ListView):
             'shisha': shisha
         }
         return render(request, 'bar_menu.html', context)
-class IndexView(View):
 
+# class IndexView(View):
+
+#      def get(self, request, *args, **kwargs):
+#          featured_post = Item.objects.all()[:6]
+#          counter = DataCount.objects.all()[:4]
+#          gal = Gallery.objects.all()
+#          special = Item.objects.filter(special=True).order_by('-timestamp')[:8]
+#          latest = Item.objects.order_by('-timestamp')[0:4]
+#          context = {
+#              'counter': counter,
+#              'special': special,
+#              'latest': latest,
+#              'gal':gal,
+#              'futureds': featured_post
+#          }
+#          return render(request, 'index.html', context)
+
+#NEW iNDEX CLASS CONFIGURATION BY KENECHUKWU
+class IndexView(View):
     def get(self, request, *args, **kwargs):
         featured_post = Item.objects.all()[:6]
         counter = DataCount.objects.all()[:4]
         gal = Gallery.objects.all()
         special = Item.objects.filter(special=True).order_by('-timestamp')[:8]
         latest = Item.objects.order_by('-timestamp')[0:4]
+        offer_sections = OfferSection.objects.all()  # Fetch offer sections from the database
         context = {
             'counter': counter,
             'special': special,
             'latest': latest,
-            'gal':gal,
-            'futureds': featured_post
+            'gal': gal,
+            'futureds': featured_post,
+            'offer_sections': offer_sections,  # Include offer sections in the context
         }
         return render(request, 'index.html', context)
 
+
+#END
 
 class OrderSummaryView(LoginRequiredMixin, View):
     def get(self, *args, **kwargs):
