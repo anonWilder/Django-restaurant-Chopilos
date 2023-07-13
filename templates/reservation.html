@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <!-- Inner Banner Section -->
+    <section class="inner-banner">
+        <div class="image-layer" style="background-image: url({% static 'images/background/banner-image-3.jpg' %});"></div>
+        <div class="auto-container">
+            <div class="inner">
+                <div class="subtitle"><span>book your table</span></div>
+                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                <h1 class="larg"><span>Reservation Form</span></h1>
+            </div>
+        </div>
+    </section>
+    <!--End Banner Section -->
+
+    <!--Online Reservation Section-->
+    <section class="reservation-contactform inner-page">
+        <div class="left-bg"><img src="{% static 'images/background/bg-5.png' %}" alt="" title=""></div>
+        <div class="right-bg"><img src="{% static 'images/background/bg-6.png' %}" alt="" title=""></div>
+        <div class="auto-container">
+            <div class="title-box centered">
+                <div class="subtitle"><span>Reservation</span></div>
+                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                <h2 class="larg">Book A Table</h2>
+                <div class="text desc">Restaurant will be open from Monday to Sunday night Till Late, All booking payment is secured with credit card, no charges will be aplly for online booking. no refundable.</div>
+                <div class="text request-info">Booking request <a href="#">0814 176 0134</a> or fill out the order form</div>
+            </div>
+            <div class="default-form reservation-form">
+                <form method="post" action="">
+                 {% csrf_token %} 
+                    <div class="row clearfix">
+                        <div class="form-group col-lg-4 col-md-6 col-sm-12">
+                            <div class="field-inner">
+                                <input type="text" name="name" value="" placeholder="Name" required="">
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-4 col-md-6 col-sm-12">
+                            <div class="field-inner">
+                                <input type="text" name="email" value="" placeholder="Email" required="">
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-4 col-md-6 col-sm-12">
+                            <div class="field-inner">
+                                <input type="text" name="phone" value="" placeholder="Phone Number" required="">
+                            </div>
+                        </div>
+                    
+
+                        <div class="form-group col-lg-4 col-md-6 col-sm-12">
+                            <div class="field-inner">
+                                <span class="alt-icon far fa-user"></span>
+                                <select name="person" class="l-icon">
+                                    <option value='1 Person'>1 Person</option>
+                                    <option value='2 Person'>2 Person</option>
+                                    <option value='3 Person'>3 Person</option>
+                                    <option value='4 Person'>4 Person</option>
+                                    <option value='5 Person'>5 Person</option>
+                                    <option value='6 Person'>6 Person</option>
+                                    <option value='7 Person'>7 Person</option>
+                                </select>
+                                <span class="arrow-icon far fa-angle-down"></span>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-4 col-md-6 col-sm-12">
+                            <div class="field-inner">
+                                <span class="alt-icon far fa-calendar"></span>
+                                <input class="l-icon datepicker" type="text" name="date" value="" placeholder="DD-MM-YYYY" required readonly>
+                                <span class="arrow-icon far fa-angle-down"></span>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-4 col-md-6 col-sm-12">
+                            <div class="field-inner">
+                                <span class="alt-icon far fa-clock"></span>
+                                <select name="time" class="l-icon">
+                                    <option>08 : 00 am</option>
+                                    <option>09 : 00 am</option>
+                                    <option>10 : 00 am</option>
+                                    <option>11 : 00 am</option>
+                                    <option>12 : 00 pm</option>
+                                    <option>01 : 00 pm</option>
+                                    <option>02 : 00 pm</option>
+                                    <option>03 : 00 pm</option>
+                                    <option>04 : 00 pm</option>
+                                    <option>05 : 00 pm</option>
+                                    <option>06 : 00 pm</option>
+                                    <option>07 : 00 pm</option>
+                                    <option>08 : 00 pm</option>
+                                    <option>09 : 00 pm</option>
+                                    <option>10 : 00 pm</option>
+                                </select>
+                                <span class="arrow-icon far fa-angle-down"></span>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                            <div class="field-inner">
+                                <textarea name="massage" placeholder="Special Request" required=""></textarea>
+                            </div>
+                        </div>
+
+                    <button type="submit" class="theme-btn btn-style-one clearfix">
+                        <span class="btn-wrap">
+                            <span class="text-one">book a table</span>
+                            <span class="text-two">book a table</span>
+                        </span>
+                    </button>
+                    </div>
+
+                </form>
+                <div class="powered-by">*Powered by Duduenovation</div>
+            </div>
+        </div>
+
+        <!--Location Section-->
+        <div class="location-with-image">
+        <div class="auto-container">
+            <div class="row justify-content-center clearfix">
+                <!--Block-->
+                {% for res in res %}
+                <div class="loc-block col-lg-6 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="image-box">
+                            <div class="image">
+                            <img style="height:210px" src="{% static 'images/resource/location-1.jpg' %}" alt="">
+                            </div>
+                            <div class="over-content">
+                                <div class="cat">Nigeria</div>
+                                <h4>{{res.name}}</h4>
+                                <div class="text">Restaurant St, Delicious City, NY. <br> P. {{res.phone}}   |   E. {{res.email}}</div>
+                                <div class="more-link"><a href="{{res.get_absolute_url}}">get direction</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!--Block-->
+                {% comment %} <div class="loc-block col-lg-6 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                        <div class="image-box">
+                            <div class="image"><a href="#"><img src="{% static 'images/resource/location-2.jpg' %}" alt=""></a></div>
+                            <div class="over-content">
+                                <div class="cat">france</div>
+                                <div class="text">520, Delicious City, Revenu Paris. <br> P. +88-123-123456   |   E. booking@domainname.com</div>
+                                <div class="more-link"><a href="#">get direction</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> {% endcomment %}
+
+            </div>
+            
+        </div>
+    </div>
+
+    </section>
+
+    
+
+
+ 
+{% endblock content %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <!-- Inner Banner Section -->
+    <section class="inner-banner">
+        <div class="image-layer" style="background-image: url({% static 'images/background/banner-image-1.jpg' %});"></div>
+        <div class="auto-container">
+            <div class="inner">
+                <div class="subtitle"><span>events</span></div>
+                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                <h2 class="larg"><span>{{post}}</span></h2>
+            </div>
+        </div>
+    </section>
+    <!--End Banner Section -->
+<br />
+<br />
+<br />
+<br />
+    <!--Gallery Section-->
+    <section class="image-gallery">
+        <div class="carousel-box">
+            <div class="auto-container">
+                <div class="image-gallery-slider owl-theme owl-carousel">
+                    <!--Slide Item-->
+                    {% for g in photos %}
+                    <div class="gallery-block">
+                        <div class="image"><a href="#" class="lightbox-image" data-fancybox="gallery"><img style="width: 830px; height: 550px" src="{{g.image.url}}" alt=""></a></div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock content %}

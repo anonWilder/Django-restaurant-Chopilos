@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+   
+    <!-- Inner Banner Section -->
+    <section class="inner-banner">
+        <div class="image-layer" style="background-image: url(images/background/banner-image-2.jpg);"></div>
+        {% comment %} <div class="auto-container">
+            <div class="inner">
+                <div class="subtitle"><span>delicious & amazing</span></div>
+                <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
+                <h1><span>Our Menu 2</span></h1>
+            </div>
+        </div> {% endcomment %}
+    </section>
+    <!--End Banner Section -->
+
+
+
+    <!--Chef Selection Section-->
+    <section class="chef-selection">
+        <div class="auto-container">
+            <div class="outer-container">
+                <div class="row clearfix">
+                    <!--Col-->
+                    <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                            <div class="image-layer" style="background-image: url({% static 'images/icons/shef.png' %});"></div>
+                            <div class="image"><img src="{% static 'images/icons/shef.png' %}" alt=""></div>
+                        </div>
+                    </div>
+                    <!--Col-->
+                    <div class="content-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                            <div class="title-box">
+                                <span class="badge-icon"><img src="images/resource/badge-2.png" alt="" title=""></span>
+                                <!-- <div class="subtitle"><span>chef selection</span></div> -->
+                                <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
+                                
+                                <div class="text" style="font-size: 40px;">{{object.title}}</div>
+                                <div class="text">{{object.description}}</div>
+                            </div>
+                            <div class="price">
+                                {%if object.discount_price %}
+                                <span class="old"><del>₦{{object.preview_price}}</del></span>
+                                 <span class="new">₦{{object.discount_price}}</span>
+                                {% else %}
+                                <span class="new">₦{{object.preview_price}}</span>
+                                {% endif %}
+                            </div>
+                            <div>
+                                <a href="{{object.get_add_to_cart_url}}" class="theme-btn btn-style-one clearfix">
+                                                    <span class="btn-wrap">
+                                                        <span class="text-one">add to cart</span>
+                                                        <span class="text-two">add to cart</span>
+                                                    </span>
+                                                </a>
+                                                <br/>
+                                <a href="{{object.get_remove_from_cart_url}}" class="theme-btn btn-style-one clearfix">
+                                                    <span class="btn-wrap">
+                                                        <span class="text-one">remove from cart</span>
+                                                        <span class="text-two">remove from cart</span>
+                                                    </span>
+                                                </a>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+{% endblock content %}

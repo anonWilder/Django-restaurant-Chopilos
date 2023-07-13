@@ -1,0 +1,187 @@
+
+/*** 
+
+====================================================================
+  Banner Slider Section
+====================================================================
+
+***/
+
+.banner-section{
+    position: relative;
+    padding: 0 0;
+    background: var(--black-color);
+  }
+  
+  
+  /* hero video css start */
+  
+  .bg-video-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: url(../../../../../../../designsupply-web.com/public/samplecontent/vender/codepen/20181014.png) no-repeat center center/cover;
+  }
+  
+  video {
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+  }
+  
+  .overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    /*background-image: linear-gradient(45deg, rgba(0,0,0,.3) 50%, rgba(0,0,0,.7) 50%);
+    background-size: 3px 3px;*/
+    z-index: 2;
+  }
+  
+  .bg-video-wrap .auto-container {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 3;
+    width: 100%;
+  
+  }
+  
+  .bg-video-wrap .content-box{
+    position:relative;
+    display: table;
+    vertical-align: middle;
+    width: 100%;
+    padding-top: var(--padding-top-150);
+    padding-bottom: var(--padding-bottom-50);
+    height: 880px;
+    min-height: 100vh;
+    z-index: 10;
+  }
+  
+  
+  .bg-video-wrap .content{
+    position:relative;
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+    z-index: 5;
+  }
+  
+  .bg-video-wrap .inner{
+    position: relative;
+    display: block;
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 5;
+  }
+  
+  .bg-video-wrap .subtitle{
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--main-color);
+    font-size: var(--font-12);
+    letter-spacing: 0.40em;
+    margin-bottom: var(--margin-bottom-10);
+    -webkit-transform:translateY(30px);
+    -ms-transform:translateY(30px);
+    transform:translateY(30px);
+  }
+  
+  
+  .bg-video-wrap .pattern-image{
+    position: relative;
+    width:100px;
+    margin:0 auto;
+    /*margin-bottom: var(--margin-bottom-30);*/
+    -webkit-transform:translateY(30px);
+    -ms-transform:translateY(30px);
+    transform:translateY(30px);
+  }
+  
+  
+  .bg-video-wrap .subtitle,
+  .bg-video-wrap .pattern-image{
+      -webkit-transform:translate(0);
+      -ms-transform:translate(0);
+      transform:translate(0);
+      -webkit-transition:all 1000ms ease 500ms;
+      -ms-transition:all 1000ms ease 500ms;
+      -o-transition:all 1000ms ease 500ms;
+      -moz-transition:all 1000ms ease 500ms;
+      transition:all 1000ms ease 500ms;
+  }
+  
+  .bg-video-wrap h1{
+    position: relative;
+    font-weight:400;
+    text-transform: none;
+    line-height:1.0em;
+    margin:0px 0px;
+    -webkit-transform:translateY(30px);
+    -ms-transform:translateY(30px);
+    transform:translateY(30px);
+  }
+  
+  .bg-video-wrap h1 span{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .bg-video-wrap h1 {
+    /*text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 3;
+    width: 100%;
+    height: 100px;*/
+  }
+  
+  
+  .bg-video-wrap .text{
+    position: relative;
+    display: block;
+    font-size: var(--font-20);
+    margin-top: var(--margin-top-10);
+    -webkit-transform:translateY(30px);
+    -ms-transform:translateY(30px);
+    transform:translateY(30px);
+  }
+  
+  
+  .bg-video-wrap .links-box{
+    position: relative;
+    display: block;
+    padding-top: var(--padding-top-40);
+    -webkit-transform:translateY(30px);
+    -ms-transform:translateY(30px);
+    transform:translateY(30px);
+  }
+  
+  
+  .bg-video-wrap .links-box .link{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  
+  

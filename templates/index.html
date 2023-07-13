@@ -1,0 +1,997 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+ <!-- Preloader End -->
+
+  <!--Video Section -->
+ <!--    <div class="bg-video-wrap">
+        <video src="{% static 'video/video-preview.mp4' %}" loop muted autoplay>
+        </video>
+        <div class="overlay">
+        </div>
+        <div class="auto-container">
+            <div class="content-box">
+                  <div class="content">
+                      <div class="clearfix">
+                          <div class="inner" style="margin-bottom: 13%;">
+                               <div class="subtitle"><span>delightful experience</span></div> 
+                              <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                              <h1 class="larg"><span>Serving the Best</span></h1>
+                              <div class="text">We Have created the best Afro-fusion meals and continental Cuisine<br/> particularly for you, come visit us Today</div>
+                              <div class="links-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                  <div class="link">
+                                      <a href="/menu/" class="theme-btn btn-style-two clearfix">
+                                          <span class="btn-wrap">
+                                              <span class="text-one">view our menu</span>
+                                              <span class="text-two">view our menu</span>
+                                          </span>
+                                      </a>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </div> -->
+
+    <!-- Banner Section -->
+    <section class="banner-section">
+        
+        <div class="banner-container">
+            <div class="banner-slider">
+                <div class="swiper-wrapper">
+                    <!--Slide Item-->
+                    <div class="swiper-slide slide-item">
+                        <div class="image-layer" style="background-image: url({% static 'images/banner1.jpg' %});"></div>
+                        <div class="auto-container">
+                          <div class="content-box">
+                                <div class="content">
+                                    <div class="clearfix">
+                                        <div class="inner">
+                                            <!-- <div class="subtitle"><span>delightful experience</span></div> -->
+                                            <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                                            <h1 class="larg"><span>Serving the Best</span></h1>
+                                            <div class="text">We Have created the best Afro-fusion meals and continental Cuisine<br/> specialy for you, come visit us Today</div>
+                                            <div class="links-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                                <div class="link">
+                                                    <a href="/menu/" class="theme-btn btn-style-two clearfix">
+                                                        <span class="btn-wrap">
+                                                            <span class="text-one">view our menu</span>
+                                                            <span class="text-two">view our menu</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Slide Item-->
+                    <div class="swiper-slide slide-item">
+                        <div class="image-layer" style="background-image: url({% static 'images/banner2.jpg' %});"></div>
+                        <div class="auto-container">
+                          <div class="content-box">
+                                <div class="content">
+                                    <div class="clearfix">
+                                        <div class="inner">
+                                            <!-- <div class="subtitle"><span>delightful experience</span></div> -->
+                                            <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                                            <h1 class="larg"><span>Rooted in Taste</span></h1>
+                                            <div class="text">Serving you a pure tast of Native dishes in its rawest form<br/> while preserving authentic tast, Check out our Menu Today.</div>
+                                            <div class="links-box clearfix">
+                                                <div class="link">
+                                                    <a href="/menu/" class="theme-btn btn-style-two clearfix">
+                                                        <span class="btn-wrap">
+                                                            <span class="text-one">view our menu</span>
+                                                            <span class="text-two">view our menu</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Slide Item-->
+                    <div class="swiper-slide slide-item">
+                        <div class="image-layer" style="background-image: url({% static 'images/banner3.png' %});"></div>
+                        <div class="auto-container">
+                          <div class="content-box">
+                                <div class="content">
+                                    <div class="clearfix">
+                                        <div class="inner">
+                                            <!-- <div class="subtitle"><span>delightful experience</span></div> -->
+                                            <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                                            <h1 class="larg"><span>Chop Life on a low</span></h1>
+                                            <div class="text">Come with family & feel the joy of mouthwatering food at <br/>Chopilos by Slippery Resturant & Lounge Today.</div>
+                                            <div class="links-box clearfix">
+                                                <div class="link">
+                                                    <a href="/menu/" class="theme-btn btn-style-two clearfix">
+                                                        <span class="btn-wrap">
+                                                            <span class="text-one">view our menu</span>
+                                                            <span class="text-two">view our menu</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"><span class="fal fa-angle-left"></span></div>
+                <div class="swiper-button-next"><span class="fal fa-angle-right"></span></div>
+            </div>
+        </div>
+
+        <div class="book-btn"><a href="/reservation/" class="theme-btn"><span class="icon"><img src="{% static 'images/resource/book-icon-1.png' %}" alt="" title=""></span><span class="txt">book a table</span></a></div>
+    </section>
+    <!--End Banner Section -->
+
+    <!--We Offer Section-->
+    <section class="we-offer-section">
+        <div class="left-bot-bg"><img src="{% static 'images/background/bg-1.png' %}" alt="" title=""></div>
+        <div class="right-top-bg"><img src="{% static 'images/background/bg-2.png' %}" alt="" title=""></div>
+        <div class="auto-container">
+            <div class="title-box centered">
+                <div class="subtitle"><span>Flavors for royalty</span></div>
+                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                <h2 class="larg">We Offer</h2>
+                <div class="text">...the best quality of food within five years of our opening,
+                    Chopilos by Slippery has been known for reinventing itself
+                    to ensure excellent services at all times.</div>
+            </div>
+            <div class="row justify-content-center clearfix">
+                <!--Block-->
+                <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="image"><a href="/menu/"><img src="{% static 'images/food.jpg' %}" alt=""></a></div>
+                        <h3><a href="menu-list.html">BREAKFAST</a></h3>
+                        <div class="more-link"><a href="/menu/">view menu</a></div>
+                    </div>
+                </div>
+
+                <!--Block-->
+                <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                        <div class="image"><a href="/menu/"><img src="{% static 'images/special.jpg' %}" alt=""></a></div>
+                        <h3><a href="menu-list.html">SPECIAL</a></h3>
+                        <div class="more-link"><a href="/menu/">view menu</a></div>
+                    </div>
+                </div>
+
+                <!--Block-->
+                <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
+                        <div class="image"><a href="/menu/"><img src="{% static 'images/drink.jpg' %}" alt=""></a></div>
+                        <h3><a href="/menu/">DRINKS</a></h3>
+                        <div class="more-link"><a href="/menu/">view menu</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Story Section-->
+    <!-- <section class="story-section">
+        <div class="left-bg"><img src="{% static 'images/background/bg-main.jpg' %}" alt="" title=""></div>
+        <div class="auto-container">
+            <div class="row clearfix">
+            
+                <div class="text-col col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="title-box centered">
+                            <div class="subtitle"><span>History a of Our Restaurant</span></div>
+                            <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                            <h2>Every Flavor Tells a Story</h2>
+                            <div class="text">Within five years of its opening, Chopilos by Slippery has been recognized for its quality of food and for reinventing itself to ensure excellent service at all times.</div>
+                        </div>
+                        <div class="booking-info">
+                            <div class="bk-title">Book Through Call</div>
+                            <div class="bk-no"><a href="tel:+234814 176 0134">0814 176 0134</a></div>
+                            
+                            <div class="link-box">
+                                <a href="/about/" class="theme-btn btn-style-two clearfix">
+                                    <span class="btn-wrap">
+                                        <span class="text-one">Read More</span>
+                                        <span class="text-two">Read More</span>
+                                    </span>
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="image-col col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                         <div class="round-stamp"><img src="{% static 'images/resource/badge-1.png' %}" alt=""></div> 
+                        <div class="images parallax-scene-1">
+                            <div class="image" data-depth="0.15"><img src="{% static 'images/aboutu.jpg' %}" alt=""></div>
+                            <div class="image" data-depth="0.30"><img src="{% static 'images/background/bg-main.jpg' %}" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> -->
+
+    <!--Special Dish Section-->
+    <section class="special-dish">
+        <div class="bottom-image"><img src="{% static 'images/resource/image-3.png' %}" alt="" title=""></div>
+        <div class="outer-container">
+            <div class="row clearfix">
+                <!--Col-->
+                <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="image-layer" style="background-image: url({% static 'images/seefood.jpg' %});"></div>
+                        <div class="image"><img src="{% static 'images/seefood.jpg' %}" alt=""></div>
+                    </div>
+                </div>
+                <!--Col-->
+                <div class="content-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="right-bg"><img src="{% static 'images/background/bg-4.png' %}" alt="" title=""></div>
+                    <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="title-box">
+                            <span class="badge-icon"><img src="{% static 'images/resource/badge-2.png' %}" alt="" title=""></span>
+                           <!--  <div class="subtitle"><span>Special dish</span></div> -->
+                            <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                            <div class="text" style="font-size: 50px;">Seafood Pasta</div>
+                            <div class="text">Each bite is an explosion of flavor, with the creaminess of the spaghetti cream, the tanginess of the white wine, and the richness of the Parmesan cheese.</div>
+                        </div>
+                        <!-- <div class="price">
+                            <span class="old">₦5,000</span>
+                             <span class="new">₦3,000</span>
+                         </div> -->
+                        <div class="link-box">
+                            <a href="/menu/" class="theme-btn btn-style-two clearfix">
+                                <span class="btn-wrap">
+                                    <span class="text-one">view all menu</span>
+                                    <span class="text-two">view all menu</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<br/>
+    <section class="image-gallery">
+        <div class="carousel-box">
+            <div class="auto-container">
+                <div class="image-gallery-slider owl-theme owl-carousel">
+                    <!--Slide Item-->
+                    {% for g in gal %}
+                    <div class="gallery-block">
+                        <div class="image"><a href="#" class="lightbox-image" data-fancybox="gallery"><img style="width: 100%; height: 100%" src="{{g.gallery.url}}" alt=""></a></div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Menu Section-->
+    <!-- <section class="menu-section">
+        <div class="left-bg"><img src="{% static 'images/background/bg-5.png' %}" alt="" title=""></div>
+        <div class="right-bg"><img src="{% static 'images/background/bg-6.png' %}" alt="" title=""></div>
+        <div class="auto-container">
+            <div class="title-box centered">
+                <div class="subtitle"><span>Special selection</span></div>
+                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                <h2>Delicious Menu</h2>
+            </div>
+
+            <div class="tabs-box menu-tabs">
+                <div class="buttons">
+                    <ul class="tab-buttons clearfix">
+                        <li class="tab-btn active-btn" data-tab="#tab-1"><span>MORNING</span></li>
+                        <li class="tab-btn" data-tab="#tab-2"><span>WEEKDAY LUNCH</span></li>
+                        <li class="tab-btn" data-tab="#tab-3"><span>DINNER</span></li>
+                        <li class="tab-btn" data-tab="#tab-4"><span>WINES</span></li>
+                    </ul>
+                </div>
+                <div class="tabs-content">
+                   
+                    <div class="tab active-tab" id="tab-1">
+                        <div class="row clearfix">
+                            <div class="menu-col col-lg-6 col-md-12 col-sm-12">
+                                <div class="inner">
+                                    
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-5.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Greek Salad</a></h5></div><div class="price"><span>₦25.50</span></div></div>
+                                            <div class="text desc"><a href="#">Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.</a></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-6.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Lasagne <span class="s-info">SEASONAL</span></a></h5></div><div class="price"><span>₦40.00</span></div></div>
+                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices</a></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-7.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Butternut Pumpkin</a></h5></div><div class="price"><span>₦10.00</span></div></div>
+                                            <div class="text desc"><a href="#">Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-col col-lg-6 col-md-12 col-sm-12">
+                                <div class="inner">
+                                  
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-8.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Tokusen Wagyu <span class="s-info">NEW</span></a></h5></div><div class="price"><span>₦39.00</span></div></div>
+                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.</a></div>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-9.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Olivas Rellenas</a></h5></div><div class="price"><span>₦25.00</span></div></div>
+                                            <div class="text desc"><a href="#">Avocados with crab meat, red onion, crab salad stuffed red bell pepper and  green bell pepper.</a></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-10.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Opu Fish</a></h5></div><div class="price"><span>₦49.00</span></div></div>
+                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="tab" id="tab-2">
+                        <div class="row clearfix">
+                            <div class="menu-col col-lg-6 col-md-12 col-sm-12">
+                                <div class="inner">
+                                    
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-5.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Greek Salad</a></h5></div><div class="price"><span>₦25.50</span></div></div>
+                                            <div class="text desc"><a href="#">Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.</a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-6.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Lasagne <span class="s-info">SEASONAL</span></a></h5></div><div class="price"><span>₦40.00</span></div></div>
+                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices</a></div>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-7.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Butternut Pumpkin</a></h5></div><div class="price"><span>₦10.00</span></div></div>
+                                            <div class="text desc"><a href="#">Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-col col-lg-6 col-md-12 col-sm-12">
+                                <div class="inner">
+                                  
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-8.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Tokusen Wagyu <span class="s-info">NEW</span></a></h5></div><div class="price"><span>₦39.00</span></div></div>
+                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.</a></div>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-9.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Olivas Rellenas</a></h5></div><div class="price"><span>₦25.00</span></div></div>
+                                            <div class="text desc"><a href="#">Avocados with crab meat, red onion, crab salad stuffed red bell pepper and  green bell pepper.</a></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-10.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Opu Fish</a></h5></div><div class="price"><span>₦49.00</span></div></div>
+                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="tab" id="tab-3">
+                        <div class="row clearfix">
+                            <div class="menu-col col-lg-6 col-md-12 col-sm-12">
+                                <div class="inner">
+                                    
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-5.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Greek Salad</a></h5></div><div class="price"><span>₦25.50</span></div></div>
+                                            <div class="text desc"><a href="#">Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.</a></div>
+                                        </div>
+                                    </div>
+                                  
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-6.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Lasagne <span class="s-info">SEASONAL</span></a></h5></div><div class="price"><span>₦40.00</span></div></div>
+                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices</a></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-7.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Butternut Pumpkin</a></h5></div><div class="price"><span>₦10.00</span></div></div>
+                                            <div class="text desc"><a href="#">Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-col col-lg-6 col-md-12 col-sm-12">
+                                <div class="inner">
+                                   
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-8.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Tokusen Wagyu <span class="s-info">NEW</span></a></h5></div><div class="price"><span>₦39.00</span></div></div>
+                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.</a></div>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-9.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Olivas Rellenas</a></h5></div><div class="price"><span>₦25.00</span></div></div>
+                                            <div class="text desc"><a href="#">Avocados with crab meat, red onion, crab salad stuffed red bell pepper and  green bell pepper.</a></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-10.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Opu Fish</a></h5></div><div class="price"><span>₦49.00</span></div></div>
+                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 
+                    <div class="tab" id="tab-4">
+                        <div class="row clearfix">
+                            <div class="menu-col col-lg-6 col-md-12 col-sm-12">
+                                <div class="inner">
+                                    
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-5.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Greek Salad</a></h5></div><div class="price"><span>₦25.50</span></div></div>
+                                            <div class="text desc"><a href="#">Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.</a></div>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-6.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Lasagne <span class="s-info">SEASONAL</span></a></h5></div><div class="price"><span>₦40.00</span></div></div>
+                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices</a></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-7.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Butternut Pumpkin</a></h5></div><div class="price"><span>₦10.00</span></div></div>
+                                            <div class="text desc"><a href="#">Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-col col-lg-6 col-md-12 col-sm-12">
+                                <div class="inner">
+                                    
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-8.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Tokusen Wagyu <span class="s-info">NEW</span></a></h5></div><div class="price"><span>₦39.00</span></div></div>
+                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.</a></div>
+                                        </div>
+                                    </div>
+                                 
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-9.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Olivas Rellenas</a></h5></div><div class="price"><span>₦25.00</span></div></div>
+                                            <div class="text desc"><a href="#">Avocados with crab meat, red onion, crab salad stuffed red bell pepper and  green bell pepper. Cucumber</a></div>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="dish-block">
+                                        <div class="inner-box">
+                                            <div class="dish-image"><a href="#"><img src="{% static 'images/resource/menu-image-10.png' %}" alt=""></a></div>
+                                            <div class="title clearfix"><div class="ttl clearfix"><h5><a href="#">Opu Fish</a></h5></div><div class="price"><span>₦49.00</span></div></div>
+                                            <div class="text desc"><a href="#">Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="open-timing">
+                <div class="hours">During winter daily from <span class="theme_color">7:00 pm</span> to <span class="theme_color">9:00 pm</span></div>
+                <div class="link-box">
+                    <a href="menu" class="theme-btn btn-style-two clearfix">
+                        <span class="btn-wrap">
+                            <span class="text-one">view all menu</span>
+                            <span class="text-two">view all menu</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!--Special Offer Section-->
+    <!--  -->
+
+    <!--Testimonials Section-->
+    <section class="testimonials-section">
+        <div class="image-layer" style="background-image: url({% static 'images/background/image-2.jpg' %});"></div>
+        <div class="auto-container">
+            <div class="carousel-box">
+                <div class="testi-top owl-theme owl-carousel">
+                    <div class="slide-item">
+                        <div class="slide-content">
+                            <div class="quotes">”</div>
+                            <div class="text quote-text">I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</div>
+                        </div>
+                    </div>
+                    <div class="slide-item">
+                        <div class="slide-content">
+                            <div class="quotes">”</div>
+                            <div class="text quote-text">I had such an amazing time and would definitely comeback again and again.</div>
+                        </div>
+                    </div>
+                    <div class="slide-item">
+                        <div class="slide-content">
+                            <div class="quotes">”</div>
+                            <div class="text quote-text">It’s was a very warm and welcoming experience from the food to the scenery and events. I felt very relaxed</div>
+                        </div>
+                    </div>
+             <!--        <div class="slide-item">
+                        <div class="slide-content">
+                            <div class="quotes">”</div>
+                            <div class="text quote-text">I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</div>
+                        </div>
+                    </div>
+                    <div class="slide-item">
+                        <div class="slide-content">
+                            <div class="quotes">”</div>
+                            <div class="text quote-text">I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</div>
+                        </div>
+                    </div>
+                    <div class="slide-item">
+                        <div class="slide-content">
+                            <div class="quotes">”</div>
+                            <div class="text quote-text">I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="separator"><span></span><span></span><span></span></div>
+         <!--        <div class="thumbs-carousel-box">
+                    <div class="testi-thumbs owl-theme owl-carousel">
+                        <div class="slide-item">
+                            <div class="image"><img src="{% static 'images/resource/author-thumb-1.jpg' %}"  alt=""></div>
+                          
+                        </div>
+                        <div class="slide-item">
+                            <div class="image"><img src="{% static 'images/resource/author-thumb-2.jpg' %}"  alt=""></div>
+                            
+                        </div>
+                        <div class="slide-item">
+                            <div class="image"><img src="{% static 'images/resource/author-thumb-3.jpg' %}"  alt=""></div>
+                        </div>
+              
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!--Reservation Section-->
+    <section class="reserve-section">
+        <div class="auto-container">
+            <div class="outer-box">
+                <div class="row clearfix">
+                    <div class="reserv-col col-lg-8 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="title">
+                                <h2 class="larg">Online Reservation</h2>
+                                <div class="request-info">Booking request <a href="#">+234 814 176 0134</a> or fill out the order form</div>
+                            </div>
+                            <div class="default-form reservation-form">
+                                <form method="post" action="https://kalanidhithemes.com/live-preview/landing-page/delici/all-demo/Delici-Center-Header/index.html">
+                                    <div class="row clearfix">
+                                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                            <div class="field-inner">
+                                                <input type="text" name="fieldname" value="" placeholder="Name" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                            <div class="field-inner">
+                                                <input type="text" name="fieldname" value="" placeholder="Phone Number" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-4 col-md-6 col-sm-12">
+                                            <div class="field-inner">
+                                                <span class="alt-icon far fa-user"></span>
+                                                <select class="l-icon">
+                                                    <option>1 Person</option>
+                                                    <option>2 Person</option>
+                                                    <option>3 Person</option>
+                                                    <option>4 Person</option>
+                                                    <option>5 Person</option>
+                                                    <option>6 Person</option>
+                                                    <option>7 Person</option>
+                                                </select>
+                                                <span class="arrow-icon far fa-angle-down"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-4 col-md-6 col-sm-12">
+                                            <div class="field-inner">
+                                                <span class="alt-icon far fa-calendar"></span>
+                                                <input class="l-icon datepicker" type="text" name="fieldname" value="" placeholder="DD-MM-YYYY" required readonly>
+                                                <span class="arrow-icon far fa-angle-down"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-4 col-md-12 col-sm-12">
+                                            <div class="field-inner">
+                                                <span class="alt-icon far fa-clock"></span>
+                                                <select class="l-icon">
+                                                    <option>08 : 00 am</option>
+                                                    <option>09 : 00 am</option>
+                                                    <option>10 : 00 am</option>
+                                                    <option>11 : 00 am</option>
+                                                    <option>12 : 00 pm</option>
+                                                    <option>01 : 00 pm</option>
+                                                    <option>02 : 00 pm</option>
+                                                    <option>03 : 00 pm</option>
+                                                    <option>04 : 00 pm</option>
+                                                    <option>05 : 00 pm</option>
+                                                    <option>06 : 00 pm</option>
+                                                    <option>07 : 00 pm</option>
+                                                    <option>08 : 00 pm</option>
+                                                    <option>09 : 00 pm</option>
+                                                    <option>10 : 00 pm</option>
+                                                </select>
+                                                <span class="arrow-icon far fa-angle-down"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                            <div class="field-inner">
+                                                <textarea name="fieldname" placeholder="Message" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                            <div class="field-inner">
+                                                
+                                                <button type="submit" class="theme-btn btn-style-one clearfix">
+                                                    <span class="btn-wrap">
+                                                        <span class="text-one">book a table</span>
+                                                        <span class="text-two">book a table</span>
+                                                    </span>
+                                                </button>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-col col-lg-4 col-md-12 col-sm-12">
+                        <div class="inner">
+                            <div class="title">
+                                <h2 style="color: #228bc7;">Contact Us</h2>
+                            </div>
+                            <div class="data">
+                                <div class="booking-info">
+                                    <div class="bk-title">Booking request</div>
+                                    <div class="bk-no"><a href="tel: +2348141760134">+234 814 176 0134</a></div>
+                                </div>
+                                <div class="separator"><span></span></div>
+                                <ul class="info">
+                                    <li><strong>Location</strong><br>873, Ozumba Mbadiwe ,
+Victoria Island, Lagos</li>
+                                    <li><strong>Opening Hours</strong><br>Monday to Sunday <br> 24hrs</li>
+                                    <!-- <li><strong>Dinner Time</strong><br>Monday to Sunday <br>05.00 pm - 10.00pm</li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Why Us Section-->
+    <section class="why-us">
+        <div class="left-bg"><img src="{% static 'images/background/bg-8.png' %}" alt="" title=""></div>
+        <div class="right-bg"><img src="{% static 'images/background/bg-7.png' %}" alt="" title=""></div>
+        <div class="auto-container">
+            <div class="title-box centered">
+                <div class="subtitle"><span>why choose us</span></div>
+                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                <h2 class="larg">Our Strength</h2>
+            </div>
+            <div class="row clearfix">
+                <!--Block style="margin-right: -34%;"-->
+                <div class="why-block col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="icon-box"><img src="{% static 'images/resource/why-icon-1.png' %}" alt=""></div>
+                        <h4>Hygienic Food</h4>
+                        <!-- <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div> -->
+                    </div>
+                </div>
+
+                <!--Block-->
+                <!-- <div class="why-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                        <div class="icon-box"><img src="{% static 'images/resource/why-icon-2.png' %}" alt=""></div>
+                        <h4>Fresh Environment</h4>
+                      
+                    </div>
+                </div> -->
+
+                <!--Block-->
+                <div class="why-block col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
+                        <div class="icon-box"><img src="{% static 'images/resource/why-icon-3.png' %}" alt=""></div>
+                        <h4>Skilled Chefs</h4>
+                        <!-- <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div> -->
+                    </div>
+                </div>
+
+                <!--Block-->
+                <div class="why-block col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="900ms">
+                        <div class="icon-box"><img src="{% static 'images/resource/why-icon-4.png' %}" alt=""></div>
+                        <h4>Event & Party</h4>
+                        <!-- <div class="text">Lorem Ipsum is simply dummy printing and typesetting.</div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Featured Links Section-->
+    <section class="featured-links">
+        <div class="outer-container">
+            <div class="row clearfix" style="background-color: #0e0d0b; background-image: url('{% static 'images/aboutuo.png' %}');">
+                <!--Block-->
+                <div class="link-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="text-block">
+                            <div class="bl-inner">
+                                <div class="content">
+                                    <h3 style="color:black"></h3>
+                                    
+                                   
+                                    <div class="link"><a href="/event" class="theme-btn"><span></span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-box">
+                            <div class="image-layer" style="left: 100px;height: 89%;background-image: url({% static 'images/resource/featured-2.jpg' %});background-position: unset;"></div>
+                            <div class="image"><img src="{% static 'images/resource/featured-2.jpg' %}" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Block link-block col-lg-4 col-md-6 col-sm-12-->
+                <div class=" alternate col-xl-4">
+                    <div class="inner wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                        <!-- <div class="image-box" style="height: 100%;">
+                            <div class="image-layer" style=""></div>
+                            <div class="image"><img src="{% static 'images/aboutu1.jpg' %}" alt=""></div>
+                        </div> -->
+                        <div class="text-block" style="height: 175%;margin-top: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;">
+                            <div class="bl-inner">
+                                <div class="content">
+                                  
+                                    <h3 class="larg">Upcoming Events</h3>
+                                    
+                                    <div class="link" style="
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;"><a href="/menu" class="theme-btn"><span>join event</span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Block-->
+                <div class="link-block col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
+                        <div class="text-block">
+                            <div class="bl-inner">
+                                <div class="content">
+                                    <h3></h3>
+                                    <div class="link"><a href="" class="theme-btn"><span></span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-box">
+                            <div class="image-layer" style="left: -100px;background-image: url({% static 'images/resource/featured-3.jpg' %});"></div>
+                            <div class="image"><img src="{% static 'images/resource/featured-3.jpg' %}" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Intro Section-->
+    <section class="intro-section">
+        <div class="image-layer" style="background-image: url({% static 'images/65.png' %});"></div>
+        <div class="auto-container">
+            <!-- <div class="content-box">
+                <div class="title-box centered">
+                    <div class="subtitle"><span>amazing experience</span></div>
+                    <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                    <h2>Watch Our Video</h2>
+                </div>
+                <div class="play-btn"><a href="https://www.youtube.com/watch?v=ZETY_l3GVQg&amp;autoplay=1" class="lightbox-image theme-btn"><span class="icon fal fa-play"><i class="ripple"></i></span></a></div>
+                <div class="separator"><span></span><span></span><span></span></div>
+                <h3>A modern restaurant with a menu that will make your mouth water.</h3>
+                <div class="auth-title">Willium Joe - Master chef</div>
+            </div> -->
+
+          <div class="fact-counter">
+                <div class="row clearfix">
+                    {% for counter in counter %}
+                    <div class="fact-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner clearfix">
+                            <div class="fact-count"><div class="count-box"><span class="count-text larg" data-stop="{{counter.count}}" data-speed="2000">0</span><i></i></div></div>
+                            <div class="fact-title">{{counter.name}}</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <!-- <div class="fact-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner clearfix">
+                            <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="82" data-speed="1500">0</span><i>+</i></div></div>
+                            <div class="fact-title">Special <br>Dishes</div>
+                        </div>
+                    </div>
+                    <div class="fact-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner clearfix">
+                            <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="35" data-speed="1000">0</span><i>+</i></div></div>
+                            <div class="fact-title">expert <br>chef</div>
+                        </div>
+                    </div>
+                    <div class="fact-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner clearfix">
+                            <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="10" data-speed="1000">0</span><i>+</i></div></div>
+                            <div class="fact-title">awards <br>won</div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+    </section> 
+
+    <!--Recnt Updates Section-->
+    <!-- <section class="news-section">
+        <div class="auto-container">
+            <div class="title-box centered">
+                <div class="subtitle"><span>recent updates</span></div>
+                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                <h2>Upcoming Event</h2>
+            </div>
+            <div class="row justify-content-center clearfix">
+               
+                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="image-box">
+                            <div class="date"><span>15/09/2022</span></div>
+                            <div class="image"><a href="#"><img src="{% static 'images/resource/news-2.jpg' %}" alt=""></a></div>
+                            <div class="over-content">
+                                <div class="cat">Food, flavour</div>
+                                <h4><a href="menu-list.html">Flavour so good you’ll try to eat with your eyes.</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                        <div class="image-box">
+                            <div class="date"><span>08/09/2022</span></div>
+                            <div class="image"><a href="#"><img src="{% static 'images/resource/news-1.jpg' %}" alt=""></a></div>
+                            <div class="over-content">
+                                <div class="cat">healthy food</div>
+                                <h4><a href="menu-list.html">Flavour so good you’ll try to eat with your eyes.</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              
+                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
+                        <div class="image-box">
+                            <div class="date"><span>03/09/2022</span></div>
+                            <div class="image"><a href="#"><img src="{% static 'images/resource/news-3.jpg' %}" alt=""></a></div>
+                            <div class="over-content">
+                                <div class="cat">recipie</div>
+                                <h4><a href="menu-list.html">Flavour so good you’ll try to eat with your eyes.</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="lower-link-box text-center">
+                <a href="#" class="theme-btn btn-style-two clearfix">
+                    <span class="btn-wrap">
+                        <span class="text-one">view our blog</span>
+                        <span class="text-two">view our blog</span>
+                    </span>
+                </a>
+            </div>
+            
+        </div>
+    </section> -->
+
+
+
+{% endblock content %}

@@ -1,0 +1,390 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>chopilos - Restaurants</title>
+<!-- Stylesheets -->
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+<link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js' %}"></script><![endif]--> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter&display=swap" rel="stylesheet">
+
+<style>
+    .larg{
+        font-family: 'Comforter', cursive;
+    }
+</style>
+<link href="{% static 'css/stylef.css' %}" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-wrapper"> 
+  
+    <!-- Preloader -->
+    <!-- <div class="loader-wrap">
+        <div class="preloader">
+            <div class="preloader-close">x</div>
+            <div id="handle-preloader" class="handle-preloader">
+                <div class="animation-preloader">
+                    <div class="spinner"></div>
+                    <div class="txt-loading">
+                        <span data-text-preloader="C" class="letters-loading">
+                           C
+                        </span>
+                        <span data-text-preloader="H" class="letters-loading">
+                            H
+                        </span>
+                        <span data-text-preloader="O" class="letters-loading">
+                            O
+                        </span>
+                        <span data-text-preloader="P" class="letters-loading">
+                            P
+                        </span>
+                        <span data-text-preloader="I" class="letters-loading">
+                            I
+                        </span>
+                        <span data-text-preloader="L" class="letters-loading">
+                            L
+                        </span>
+                         <span data-text-preloader="O" class="letters-loading">
+                            O
+                        </span>
+                         <span data-text-preloader="S" class="letters-loading">
+                            S
+                        </span>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div> -->
+    <!-- Preloader End -->
+    
+       <div class="mt-5 pt-4">
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endfor %}
+    {% endif %}
+    </div>
+    <!-- Main Header-->
+    <header class="main-header header-down">
+        <div class="header-top">
+            <div class="auto-container">
+                <div class="inner clearfix">
+                    <div class="top-left clearfix">
+                        <ul class="top-info clearfix">
+                            <li><i class="icon far fa-map-marker-alt"></i>Restaurant @ 873, Ozumba Mbadiwe ,
+                            Victoria Island, Lagos</li>
+                            <!--  -->
+                            <li><i class="icon far fa-clock"></i>Daily : Open 24hrs</li>
+                            <!--  -->
+                        </ul>
+                    </div>
+                    <div class="top-right clearfix">
+                        <ul class="top-info clearfix">
+                            <li><a href="tel:+2348141760134"><i class="icon far fa-phone"></i></a></li>
+                            <li><a href="mailto:Slipperylounge11@gmail.com"><i class="icon far fa-envelope"></i></a></li>
+                            <li><a href="https://www.instagram.com/chopilosbyslippery/"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="mt-5 pt-4">
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endfor %}
+    {% endif %}
+    </div>
+        <!-- Header Upper -->
+        <div class="header-upper">        
+            <div class="auto-container">
+                <!-- Main Box -->
+				<div class="main-box d-flex justify-content-between align-items-center flex-wrap">
+				
+					<!-- Links Box -->
+					<div class="clearfix">
+						<!-- Hidden Nav Toggler -->
+                        <div class="nav-toggler">
+                            <button class="hidden-bar-opener">
+                                <span class="hamburger">
+                                    <span class="top-bun"></span>
+                                    <span class="meat"></span>
+                                    <span class="bottom-bun"></span>
+                                </span>
+                            </button>
+                        </div>
+					</div>
+				
+                    <!--Logo-->
+                    <div class="logo-box">
+                         <div class="logo"><a href="/" title="Delici - Restaurants "><img src="{% static 'images/logo.png' %}" alt="" title="Delici - Restaurants"></a></div>
+                    </div>
+
+                    <!--Don't use this menu for this option-->
+                    <div class="nav-box clearfix">
+                        <!--Nav Outer-->
+                        <div class="nav-outer clearfix">         
+                            <nav class="main-menu">
+                                <ul class="navigation clearfix">
+                                    <li class="current"><a href="/">Home</a>
+                                    </li>
+                                    <li class="has-mega-menu"><a href="/menu">Menus</a>  
+                                    </li>
+                                    <li><a href="/event">Events</a></li>
+                                    <li><a href="/about">About Us</a></li>
+                                    <li><a href="/reservation">Reservation</a></li>
+                                    <!-- <li class="dropdown"><a href="#">Pages</a>
+                                        <ul>
+                                            <li><a href="#">Dropdown Menu 1</a></li>
+                                            <li><a href="#">Dropdown Menu 2</a></li>
+                                            <li><a href="#">Dropdown Menu 3</a></li>
+                                            <li class="dropdown"><a href="#">Dropdown Menu 4</a>
+                                                <ul>
+                                                    <li><a href="#">Dropdown Menu level 2</a></li>
+                                                    <li><a href="#">Dropdown Menu level 2</a></li>
+                                                    <li><a href="#">Dropdown Menu Level 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Dropdown Lorem 5</a></li>
+                                        </ul>
+                                    </li> -->
+                                    <!-- <li><a href="/event">Events</a></li> -->
+                                    <li><a href="/contact">Contact</a></li>
+                                </ul>
+                            </nav>
+                            <!-- Main Menu End-->
+                        </div>
+                        <!--Nav Outer End-->
+                    </div>
+                    <!---->
+					
+					<div class="link link-btn">
+							<span class="btn-wrap">
+								<span class="text-one"></span>
+								<span class="text-two"></span>
+							</span>
+					</div>
+                    
+					
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--End Main Header -->
+    
+    <!--Menu Backdrop-->
+    <div class="menu-backdrop"></div>
+
+    <!-- Hidden Navigation Bar -->
+    <section class="hidden-bar">
+        <!-- Hidden Bar Wrapper -->
+        <div class="inner-box">
+            <div class="cross-icon hidden-bar-closer"><span class="far fa-close"></span></div>
+            <div class="logo-box"><a href="/" title="Delici - Restaurants HTML Template"><img src="{% static 'images/resource/sidebar-logo.png' %}" alt="" title="Delici - Restaurants HTML Template"></a></div>
+            
+            <!-- .Side-menu -->
+            <div class="side-menu">
+                 <ul class="navigation clearfix">
+                    <li class=""><a href="/">Home</a>
+                        
+                    </li>
+                    
+                        <li class="dropdown"><a href="#">Menus</a>
+                            <ul>
+                                <li><a href="/menu"> Kitchen Menus</a></li>
+                                <li><a href="/bar-menu"> Bar Menus</a></li>
+                            </ul>
+                        </li>
+                       
+                    </li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/event">Events</a></li>
+                    <!-- <li><a href="/event">Events</a></li> -->
+                    <li><a href="/reservation">Reservation</a></li>
+                    {% comment %} <li class="dropdown"><a href="#">Pages</a>
+                        <ul>
+                            <li><a href="#">Dropdown Menu 1</a></li>
+                            <li><a href="#">Dropdown Menu 2</a></li>
+                            <li><a href="#">Dropdown Menu 3</a></li>
+                            <li class="dropdown"><a href="#">Dropdown Menu 4</a>
+                                <ul>
+                                    <li><a href="#">Dropdown Menu level 2</a></li>
+                                    <li><a href="#">Dropdown Menu level 2</a></li>
+                                    <li><a href="#">Dropdown Menu Level 3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Dropdown Lorem 5</a></li>
+                        </ul>
+                    </li> current{% endcomment %}
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div><!-- /.Side-menu -->
+            
+            <h2>Visit Us</h2>
+            <ul class="info">
+                <li>Restaurant@ 873, Ozumba Mbadiwe , <br>Victoria Island, Lagos</li>
+                <li>Open: 24hrs</li>
+                <li><a href="mailto:Slipperylounge11@gmail.com">Slipperylounge11@gmail.com</a></li>
+            </ul>
+            <div class="separator"><span></span></div>
+            <div class="booking-info">
+                <div class="bk-title">Booking request</div>
+                <div class="bk-no"><a href="tel:+2348141760134">+234 814 176 0134</a></div>
+            </div>
+        
+        </div><!-- / Hidden Bar Wrapper -->
+    </section>
+    <!-- / Hidden Bar -->
+
+    <!--Info Back Drop-->
+    <div class="info-back-drop"></div>
+    
+    <!-- Hidden Bar -->
+    <section class="info-bar">
+        <div class="inner-box">
+            <div class="cross-icon"><span class="far fa-close"></span></div>
+            <div class="logo-box"><a href="/" title="Delici - Restaurants"><img src="{% static 'images/resource/sidebar-logo.png' %}" alt="" title="Delici - Restaurants"></a></div>
+            <div class="image-box"><img src="{% static 'images/resource/sidebar-image.jpg' %}" alt="" title=""></div>
+
+            <h2>Visit Us</h2>
+            <ul class="info">
+                <li>Restaurant@ 873, Ozumba Mbadiwe , <br>Victoria Island, Lagos</li>
+                <li>Open: 24hrs</li>
+                <li><a href="mailto:Slipperylounge11@gmail.com">Slipperylounge11@gmail.com</a></li>
+            </ul>
+            <div class="separator"><span></span></div>
+            <div class="booking-info">
+                <div class="bk-title">Booking request</div>
+                <div class="bk-no"><a href="tel:+2348141760134"> +234 814 176 0134</a></div>
+            </div>
+        </div>
+    </section>
+    <!--End Hidden Bar -->
+
+
+
+    
+            {% block content %}
+            {% endblock content %}
+
+
+
+    <!--Main Footer-->
+    <footer class="main-footer">
+        <div class="image-layer" style="background-image: url({% static 'images/background/image-4.jpg' %});"></div>
+        <div class="upper-section">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <!--Footer Col-->
+                    <div class="footer-col info-col col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="content">
+                                <div class="logo"><a href="/" title="Delici - Restaurants"><img src="{% static 'images/logo.png' %}" alt="" title="Delici - Restaurants HTML Template"></a></div>
+                                <div class="info">
+                                    <ul>
+                                        <li><a href="tel:+ +2348141760134">Enquiries :  +234 814 176 0134</a></li>
+
+                                        <li>Restaurant@ 873, Ozumba Mbadiwe , Victoria Island, Lagos</li>
+                                        <li>Open: 24hrs</li>
+                                        <li><a href="mailto:Slipperylounge11@gmail.com">Slipperylounge11@gmail.com</a></li>
+                                    </ul>
+                                </div>
+                                <div class="separator"><span></span><span></span><span></span></div>
+                                <div class="newsletter">
+                                    <h3>Get News & Offers</h3>
+                                    <!-- <div class="text">Subscribe us & Get <span>25% Off.</span></div> -->
+                                    <div class="newsletter-form">
+                                        <form method="post" action="#">
+                                            <div class="form-group">
+                                                <span class="alt-icon far fa-envelope"></span>
+                                                <input type="email" name="email" value="" placeholder="email" required>
+                                                <button type="submit" class="theme-btn btn-style-one clearfix">
+                                                    <span class="btn-wrap">
+                                                        <span class="text-one">subscribe</span>
+                                                        <span class="text-two">subscribe</span>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Footer Col-->
+                    <div class="footer-col links-col col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <ul class="links">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/menu">Menus</a></li>
+                                <li><a href="/event">Events</a></li>
+                                <li><a href="/about">About us</a></li>
+                                <!-- <li><a href="our-chef.html">Our chefs</a></li> -->
+                                <li><a href="/contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--Footer Col-->
+                    <div class="footer-col links-col last col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <ul class="links">
+                                <!-- <li><a href="#">facebook</a></li> -->
+                                <li><a href="https://www.instagram.com/chopilosbyslippery/" title="instagram icons"><img src="{% static 'images/icons/instagram.png' %}" style="width: 40px;" alt="" title=""> instagram</a></li>
+                                <!-- <li><a href="#">Twitter</a></li>
+                                <li><a href="#">Youtube</a></li>
+                                <li><a href="#">Google map</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="copyright">&copy; All Rights Reserved   |  Chopilos by slippery | Crafted by <a href="#" target="blank">DuduInnovation</a></div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+<!--End pagewrapper--> 
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon fa fa-angle-up"></span></div>
+
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery-ui.js' %}"></script>
+<script src="{% static 'js/jquery.fancybox.js' %}"></script>
+<script src="{% static 'js/swiper.js' %}"></script>
+<script src="{% static 'js/owl.js' %}"></script>
+<script src="{% static 'js/appear.js' %}"></script>
+<script src="{% static 'js/wow.js' %}"></script>
+<script src="{% static 'js/parallax.min.js' %}"></script>
+<script src="{% static 'js/custom-script.js' %}"></script>
+</body>
+
+</html>

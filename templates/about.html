@@ -1,0 +1,356 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <!-- Inner Banner Section -->
+    <section class="inner-banner">
+        <div class="image-layer" style="background-image: url({% static 'images/background/banner-image-1.jpg' %});"></div>
+        <div class="auto-container">
+            <div class="inner">
+                <div class="subtitle"><span>our story</span></div>
+                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                <h1 class="larg"><span>About Us</span></h1>
+            </div>
+        </div>
+    </section>
+    <!--End Banner Section -->
+
+    <!--About Section-->
+    <section class="about-section">
+        <div class="left-bg"><img src="{% static 'images/background/bg-10.png' %}" alt="" title=""></div>
+        <div class="right-bg"><img src="{% static 'images/background/bg-11.png' %}" alt="" title=""></div>
+        <div class="auto-container">
+            <div class="title-box centered">
+                <div class="subtitle"><span>who we are</span></div>
+                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                <h5 style="font-family: var(--font-family-DMsans);">At Chopilos by Slippery, the items on our menu are carefully curated by our in-house chefs, and are inspired by what we like to call an Afro-fusion cuisine, from our all-day breakfast menu to our sizzling, melt-in-your-mouth lamb chops, as well as a reminder of home in our rice dishes.Not only do we make our mouth-watering meals with fresh ingredients including fresh seafood from the Anuoluwapo seafood market in Victoria Island, we also have a variety of carefully handcrafted cocktails, wine, spirits and champagne to choose from.Whether you are ordering a multi-course meal, grabbing a quick drink at the bar or ordering off our 24-hour delivery menu, Chopilos by Slippery’s upscale yet casual ambience provides the perfect space to enjoy a great and comfortable dining time with family and friends as well as clients and business associates.Within five years of its opening, Chopilos by Slippery has been recognized for its quality of food and for reinventing itself to ensure excellent service at all times.We have had notable celebrities including world renowned musicians, Wizkid and Davido, walk through our doors and enjoying our delicious meals at different times.Why don’t you come dine with us and enjoy the tastiest meals you can find in Lagos. We look forward to welcoming you to our exquisite restaurant where you are guaranteed a positively memorable experience. <span class="theme_color">24-hour delivery menu</span></h5>
+            </div>
+            <!-- <div class="row clearfix">
+              
+                <div class="about-block content-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="text">Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived.</div>
+                        <div class="signature"><img src="{% static 'images/resource/signature-1.png' %}" alt="" title=""></div>
+                        <div class="author">JERRY ADIBE - founder</div>
+                        <div class="video-box">
+                            <div class="image"><a href="https://www.youtube.com/watch?v=ZETY_l3GVQg" class="lightbox-image"><img src="{% static 'images/28-1536x1024.png' %}" alt=""></a>
+                            <a href="https://www.youtube.com/watch?v=ZETY_l3GVQg" class="lightbox-image play-btn"><span class="icon fal fa-play"><i class="ripple"></i></span></a></div>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="about-block image-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                        <div class="image"><img src="{% static 'images/resource/profile.jpg' %}" alt=""></div>
+                    </div>
+                </div>
+
+                
+                <div class="about-block info-block col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
+                        <ul class="info">
+                            <li><strong>Availability</strong>Monday to Sunday <br>24hrs</li>
+                            <li><strong>Open Time</strong>Monday to Sunday <br>7.00 pm - 10.30 pm</li>
+                            <li class="separator"><span></span></li>
+                            <li><strong>Contact Us</strong><span class="address">873, Ozumba Mbadiwe ,Victoria Island, Lagos</span> <a href="tel:+2348098922022">0809 892 2022</a> <br><a href="mailto:Slipperylounge11@gmail.com">Slipperylounge11@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div> -->
+            <!-- <div class="fact-counter">
+                <div class="row clearfix">
+                    <div class="fact-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner clearfix">
+                            <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="150" data-speed="2000">0</span><i>+</i></div></div>
+                            <div class="fact-title">daily order</div>
+                        </div>
+                    </div>
+                    <div class="fact-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner clearfix">
+                            <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="82" data-speed="1500">0</span><i>+</i></div></div>
+                            <div class="fact-title">Special Dishes</div>
+                        </div>
+                    </div>
+                    <div class="fact-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner clearfix">
+                            <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="10" data-speed="1000">0</span><i>+</i></div></div>
+                            <div class="fact-title">expert chef</div>
+                        </div>
+                    </div>
+                    <div class="fact-block col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner clearfix">
+                            <div class="fact-count"><div class="count-box"><span class="count-text" data-stop="5" data-speed="1000">0</span><i>+</i></div></div>
+                            <div class="fact-title">Star</div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!--Fluid Section-->
+    {% comment %} <section class="fluid-section">
+        <div class="outer-container">
+            <div class="row clearfix">
+                <!--Col-->
+                <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="image-layer" style="background-image: url({% static 'images/background/image-5.jpg' %});"></div>
+                        <div class="image"><img src="{% static 'images/background/image-5.jpg' %}" alt=""></div>
+                    </div>
+                </div>
+                <!--Col-->
+                <div class="content-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="right-bg"><img src="{% static 'images/background/bg-12.png' %}" alt="" title=""></div>
+                    <div class="inner clearfix wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="content-box">
+                            <div class="title-box centered">
+                                <div class="subtitle"><span>35 year of experience</span></div>
+                                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                                <h2>Award Winning Chef</h2>
+                                <div class="text">Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type.</div>
+                            </div>
+                            <div class="info">
+                                <div class="signature"><img src="{% static 'images/resource/signature-2.png' %}" alt="" title=""></div>
+                                <div class="author">Henry - EXCUTIVE CHEF</div>
+                            </div>
+                            <div class="link-box">
+                                <a href="our-chef.html" class="theme-btn btn-style-two clearfix">
+                                    <span class="btn-wrap">
+                                        <span class="text-one">meet our team</span>
+                                        <span class="text-two">meet our team</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> {% endcomment %}
+
+    <!--Fluid Section-->
+
+
+    <!--Services Section-->
+    <!-- <section class="services-section">
+        <div class="left-bg"><img src="{% static 'images/background/bg-14.png' %}" alt="" title=""></div>
+        <div class="right-bg"><img src="{% static 'images/background/bg-15.png' %}" alt="" title=""></div>
+        <div class="auto-container">
+            <div class="title-box centered">
+                <div class="subtitle"><span>our services</span></div>
+                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                <h2>Exquisite Restaurant in City</h2>
+            </div>
+            <div class="row clearfix">
+                <div class="s-col col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="s-block">
+                            <div class="inner">
+                                <div class="icon-box"><img src="{% static 'images/resource/s-icon-1.png' %}" alt="" title=""></div>
+                                <h4>Door Delivery</h4>
+                                <div class="text">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been.</div>
+                            </div>
+                        </div>
+                        <div class="s-block alternate">
+                            <div class="inner">
+                                <div class="icon-box"><img src="{% static 'images/resource/s-icon-2.png' %}" alt="" title=""></div>
+                                <h4>Fine Dining</h4>
+                                <div class="text">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s-col last col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="s-block alternate">
+                            <div class="inner">
+                                <div class="icon-box"><img src="{% static 'images/resource/s-icon-3.png' %}" alt="" title=""></div>
+                                <h4>Outdoor Catering</h4>
+                                <div class="text">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been.</div>
+                            </div>
+                        </div>
+                        <div class="s-block">
+                            <div class="inner">
+                                <div class="icon-box"><img src="{% static 'images/resource/s-icon-4.png' %}" alt="" title=""></div>
+                                <h4>Banquets Hall</h4>
+                                <div class="text">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-col col-lg-4 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="image-box"><img src="{% static 'images/resource/service-image.png' %}" alt="" title=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!--Testimonials Section-->
+    {% comment %} <section class="testimonials-two">
+        <div class="image-layer" style="background-image: url({% static 'images/background/image-7.jpg' %});"></div>
+        <div class="auto-container">
+            
+            <div class="title-box centered">
+                <div class="subtitle"><span>testimonials</span></div>
+                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                <h2>What People Are Saying</h2>
+            </div>
+            <div class="carousel-box">
+                <div class="testimonial-slider owl-theme owl-carousel">
+                    <!--Slide Item-->
+                    <div class="testi-block">
+                        <div class="inner-box">
+                            <div class="quote-icon"><img src="{% static 'images/icons/quotes-1.png' %}" alt="" title=""></div>
+                            <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
+                            <div class="text">The taste of food was really amazing, Wow ! outstanding dinner made by Mater chef John Rute, I never forget this delicious food experience.</div>
+                            <div class="auth-info">
+                                <div class="image"><img src="{% static 'images/resource/author-thumb-4.jpg' %}" alt=""></div>
+                                <div class="auth-title">willium joe</div>
+                                <div class="location">New York</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Slide Item-->
+                    <div class="testi-block">
+                        <div class="inner-box">
+                            <div class="quote-icon"><img src="{% static 'images/icons/quotes-1.png' %}" alt="" title=""></div>
+                            <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
+                            <div class="text">Hygienic food & fresh enviroment, everyone had a wonderful delite experience. It was FABULOUS! great experience at The Italian gourmet.</div>
+                            <div class="auth-info">
+                                <div class="image"><img src="{% static 'images/resource/author-thumb-5.jpg' %}" alt=""></div>
+                                <div class="auth-title">Theresa Tin</div>
+                                <div class="location">Chicago</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Slide Item-->
+                    <div class="testi-block">
+                        <div class="inner-box">
+                            <div class="quote-icon"><img src="{% static 'images/icons/quotes-1.png' %}" alt="" title=""></div>
+                            <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
+                            <div class="text">Special treat to dine, It was wow experience food was really delicious! outstanding dinner made by Mater chef, food experience was unfogetable!</div>
+                            <div class="auth-info">
+                                <div class="image"><img src="{% static 'images/resource/author-thumb-6.jpg' %}" alt=""></div>
+                                <div class="auth-title">Michel Byrd</div>
+                                <div class="location">Denmark</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Slide Item-->
+                    <div class="testi-block">
+                        <div class="inner-box">
+                            <div class="quote-icon"><img src="{% static 'images/icons/quotes-1.png' %}" alt="" title=""></div>
+                            <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
+                            <div class="text">The taste of food was really amazing, Wow ! outstanding dinner made by Mater chef John Rute, I never forget this delicious food experience.</div>
+                            <div class="auth-info">
+                                <div class="image"><img src="{% static 'images/resource/author-thumb-4.jpg' %}" alt=""></div>
+                                <div class="auth-title">willium joe</div>
+                                <div class="location">New York</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Slide Item-->
+                    <div class="testi-block">
+                        <div class="inner-box">
+                            <div class="quote-icon"><img src="{% static 'images/icons/quotes-1.png' %}" alt="" title=""></div>
+                            <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
+                            <div class="text">Hygienic food & fresh enviroment, everyone had a wonderful delite experience. It was FABULOUS! great experience at The Italian gourmet.</div>
+                            <div class="auth-info">
+                                <div class="image"><img src="{% static 'images/resource/author-thumb-5.jpg' %}" alt=""></div>
+                                <div class="auth-title">Theresa Tin</div>
+                                <div class="location">Chicago</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Slide Item-->
+                    <div class="testi-block">
+                        <div class="inner-box">
+                            <div class="quote-icon"><img src="{% static 'images/icons/quotes-1.png' %}" alt="" title=""></div>
+                            <div class="rating"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
+                            <div class="text">Special treat to dine, It was wow experience food was really delicious! outstanding dinner made by Mater chef, food experience was unfogetable!</div>
+                            <div class="auth-info">
+                                <div class="image"><img src="{% static 'images/resource/author-thumb-6.jpg' %}" alt=""></div>
+                                <div class="auth-title">Michel Byrd</div>
+                                <div class="location">Denmark</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section> {% endcomment %}
+
+    <!--Why Us Section-->
+    {% comment %} <section class="why-us-two">
+        <div class="auto-container">
+            <div class="title-box centered">
+                <div class="subtitle"><span>why choose us</span></div>
+                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                <h2>Our Strength</h2>
+            </div>
+            <div class="row clearfix">
+                <!--Block-->
+                <div class="why-block-two col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="image-box"><img src="{% static 'images/resource/featured-4.jpg' %}" alt=""></div>
+                        <div class="over-box">
+                            <div class="icon-box"><img src="{% static 'images/resource/why-icon-1.png' %}" alt=""></div>
+                            <h4>Hygienic Food</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Block-->
+                <div class="why-block-two m-top col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                        <div class="image-box"><img src="{% static 'images/resource/featured-5.jpg' %}" alt=""></div>
+                        <div class="over-box">
+                            <div class="icon-box"><img src="{% static 'images/resource/why-icon-2.png' %}" alt=""></div>
+                            <h4>Fresh Environment</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Block-->
+                <div class="why-block-two col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
+                        <div class="image-box"><img src="{% static 'images/resource/featured-6.jpg' %}" alt=""></div>
+                        <div class="over-box">
+                            <div class="icon-box"><img src="{% static 'images/resource/why-icon-3.png' %}" alt=""></div>
+                            <h4>Skilled Chefs</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Block-->
+                <div class="why-block-two m-top col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="900ms">
+                        <div class="image-box"><img src="{% static 'images/resource/ev.jpg' %}" alt=""></div>
+                        <div class="over-box">
+                            <div class="icon-box"><img src="{% static 'images/del/28-1536x1024.png' %}" alt=""></div>
+                            <h4>Event & Party</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> {% endcomment %}
+
+    <!--Gallery Section-->
+
+
+
+{% endblock content %}

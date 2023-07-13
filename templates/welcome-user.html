@@ -1,0 +1,14 @@
+<p>Price</p>
+
+<form method="post">
+    {% csrf_token %}
+<input type="text" name="min_price" maxlength="4" size="3" >
+to <input type="text" name="max_price" maxlength="4" size="3">
+<input type="submit" value="Go">
+</form>
+
+
+{% for post in my_products %}
+
+    {{ post.title }}
+{% endfor %}

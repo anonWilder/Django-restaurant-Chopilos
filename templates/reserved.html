@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <!-- Inner Banner Section -->
+    <section class="inner-banner">
+        <div class="image-layer" style="background-image: url({% static 'images/background/banner-image-3.jpg' %});"></div>
+        <div class="auto-container">
+            <div class="inner">
+                <div class="subtitle"><span>Find your Events</span></div>
+                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                <h1 class="larg"><span>Events</span></h1>
+            </div>
+        </div>
+    </section>
+    <!--End Banner Section -->
+
+    <!--Online Reservation Section-->
+    <section class="online-reservation inner-page">
+        <div class="left-bg"><img src="{% static 'images/background/bg-5.png' %}" alt="" title=""></div>
+        <div class="right-bg"><img src="{% static 'images/background/bg-6.png' %}" alt="" title=""></div>
+        <div class="auto-container">
+            <div class="title-box centered">
+                <div class="subtitle"><span>EVENTS</span></div>
+                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                <h2 class="larg">All our Events</h2>
+                <!-- <div class="text desc">Restaurant will be open for all days, Sunday night will be closed, All booking payment is secured with credit card, no charges will be aplly for online booking. no refundable.</div>
+                <div class="text request-info">Booking request <a href="#">0814 176 0134</a> or Click to redirect fill out the order form</div> -->
+            </div>
+           <!--  <div class="default-form reservation-form">
+                <form method="post" action="#">
+                    <div class="row clearfix">
+                        <div class="form-group col-lg-4 col-md-6 col-sm-12">
+                            <div class="field-inner">
+                                <span class="alt-icon far fa-user"></span>
+                                <select class="l-icon">
+                                    <option>1 Person</option>
+                                    <option>2 Person</option>
+                                    <option>3 Person</option>
+                                    <option>4 Person</option>
+                                    <option>5 Person</option>
+                                    <option>6 Person</option>
+                                    <option>7 Person</option>
+                                </select>
+                                <span class="arrow-icon far fa-angle-down"></span>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-4 col-md-6 col-sm-12">
+                            <div class="field-inner">
+                                <span class="alt-icon far fa-calendar"></span>
+                                <input class="l-icon datepicker" type="text" name="fieldname" value="" placeholder="DD-MM-YYYY" required readonly>
+                                <span class="arrow-icon far fa-angle-down"></span>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-4 col-md-12 col-sm-12">
+                            <div class="field-inner">
+                                <span class="alt-icon far fa-clock"></span>
+                                <select class="l-icon">
+                                    <option>08 : 00 am</option>
+                                    <option>09 : 00 am</option>
+                                    <option>10 : 00 am</option>
+                                    <option>11 : 00 am</option>
+                                    <option>12 : 00 pm</option>
+                                    <option>01 : 00 pm</option>
+                                    <option>02 : 00 pm</option>
+                                    <option>03 : 00 pm</option>
+                                    <option>04 : 00 pm</option>
+                                    <option>05 : 00 pm</option>
+                                    <option>06 : 00 pm</option>
+                                    <option>07 : 00 pm</option>
+                                    <option>08 : 00 pm</option>
+                                    <option>09 : 00 pm</option>
+                                    <option>10 : 00 pm</option>
+                                </select>
+                                <span class="arrow-icon far fa-angle-down"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="#" class="theme-btn btn-style-one clearfix">
+                        <span class="btn-wrap">
+                            <span class="text-one">Find my Table</span>
+                            <span class="text-two">Find my Table</span>
+                        </span>
+                    </button>
+                </form>
+                <div class="powered-by">*Powered by Duduenovation</div>
+            </div> -->
+        </div>
+
+        <!--map Section-->
+    <!--     <div class="map-location-section">
+            <div class="auto-container">
+                <div class="outer-box">
+                    <div class="row clearfix">
+                        <div class="reserv-col col-lg-8 col-md-12 col-sm-12">
+                            <div class="inner">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81392.11276571127!2d-74.03116502768826!3d40.70144849986174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1667928043843!5m2!1sen!2sin" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                        <div class="info-col col-lg-4 col-md-12 col-sm-12">
+                            <div class="inner">
+                                <div class="title">
+                                    <h2>Nigeria</h2>
+                                </div>
+                                <div class="data">
+                                    <ul class="info">
+                                        <li><strong>Location</strong><br>@ 873, Ozumba Mbadiwe , <br>Victoria Island, Lagos  <br> Phone : {{object.phone}} <br> Email : {{object.email}} </li>
+                                        <div class="separator"><span></span></div>
+                                        <li><strong>Reservation Time</strong><br>-<br>{{object.time}}</li>
+                                        <li><strong>Reservation Date</strong><br>- <br>{{object.date}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div> -->
+  <section class="chef-selection">
+        <div class="auto-container">
+            <div class="outer-container">
+                <div class="row clearfix">
+                    <!--Col-->
+                    {% for iteam in New %}
+                    <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                           {% if iteam.image %}
+                            <div class="image-layer" style="background-image: url({{iteam.image.url}});background-attachment:inherit;"></div>
+                            <div class="image"><img src="{{iteam.image.url}}" alt=""></div>
+                           {% endif %} 
+                        </div>
+                    </div>
+                    <!--Col-->
+                    
+                    <div class="content-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                            <div class="title-box">
+                                <span class="badge-icon">
+                                    <img src="{% static 'images/resource/badge-2.png' %}" alt="{{iteam.title}}" title=""></span>
+                                <!-- <div class="subtitle"><span>chef selection</span></div> {{iteam.address|slice:":65"}}-->
+                                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                                <h3>{{iteam.title}} <br/></h3>
+                               <div class="text">{{iteam.event_date}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!--location Section-->
+        <div class="location-center">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <!--Block-->
+                     {% for iteam in Events %}
+                    <div class="location-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                        <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                            <div class="icon-box">
+                                <a href="{{iteam.get_absolute_url}}"><img src="{{iteam.image.url}}" alt=""></a></div>
+                            <h5>{{iteam.title}}</h5> 
+                            <div class="text">{{iteam.event_date}}.</div>
+                            <div class="more-link"><a href="{{iteam.get_absolute_url}}">get full Details</a></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+           
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    
+
+ 
+{% endblock content %}
