@@ -20,6 +20,7 @@ from django.core.mail import EmailMessage
 from django.core.mail import send_mail
 from django.views import View
 from .models import OfferSection
+from .models import SpecialSection
 import random
 import string
 # import Paystack
@@ -372,16 +373,19 @@ class IndexView(View):
         gal = Gallery.objects.all()
         special = Item.objects.filter(special=True).order_by('-timestamp')[:8]
         latest = Item.objects.order_by('-timestamp')[0:4]
-        offer_sections = OfferSection.objects.all()  # Fetch offer sections from the database
+        offer_sections = OfferSection.objects.all()
+        special_section = SpecialSection.objects.first()  # Retrieve the first SpecialSection object
         context = {
             'counter': counter,
             'special': special,
             'latest': latest,
             'gal': gal,
             'futureds': featured_post,
-            'offer_sections': offer_sections,  # Include offer sections in the context
+            'offer_sections': offer_sections,
+            'special_section': special_section,
         }
         return render(request, 'index.html', context)
+
 
 
 #END
@@ -796,8 +800,11 @@ def list_category(request, slug):
 
 
 def about(request):
-    
-    return render(request,'about.html')
+    about_section = AboutSection.objects.first()  # Retrieve the first AboutSection object
+    context = {
+        'about_section': about_section,
+    }
+    return render(request,'about.html',context)
 
 def contact(request):
     if request.method == "POST":

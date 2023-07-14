@@ -221,8 +221,8 @@
                 <!--Col-->
                 <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <div class="image-layer" style="background-image: url({% static 'images/seefood.jpg' %});"></div>
-                        <div class="image"><img src="{% static 'images/seefood.jpg' %}" alt=""></div>
+                        <div class="image-layer" style="background-image: url({{ special_section.image.url }});"></div>
+                        <div class="image"><img src="{{ special_section.image.url }}" alt=""></div>
                     </div>
                 </div>
                 <!--Col-->
@@ -231,10 +231,10 @@
                     <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="title-box">
                             <span class="badge-icon"><img src="{% static 'images/resource/badge-2.png' %}" alt="" title=""></span>
-                           <!--  <div class="subtitle"><span>Special dish</span></div> -->
+                            <!--  <div class="subtitle"><span>Special dish</span></div> -->
                             <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
-                            <div class="text" style="font-size: 50px;">Seafood Pasta</div>
-                            <div class="text">Each bite is an explosion of flavor, with the creaminess of the spaghetti cream, the tanginess of the white wine, and the richness of the Parmesan cheese.</div>
+                            <div class="text" style="font-size: 50px;">{{ special_section.title }}</div>
+                            <div class="text">{{ special_section.description }}</div>
                         </div>
                         <!-- <div class="price">
                             <span class="old">₦5,000</span>
@@ -250,10 +250,12 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
+    
+    <!-- Special Dish Section -->
+    
 
 <br/>
     <section class="image-gallery">

@@ -14,11 +14,19 @@ class OfferSection(models.Model):
     image = models.ImageField(upload_to='offer_images/')
 #END
 
+#INDEX PAGE SPECIAL SECTION
+class SpecialSection(models.Model):
+    image = models.ImageField(upload_to='special_images/')
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+#END
 
 
-
-
-
+#ABOUT PAGE TEXT
+class AboutSection(models.Model):
+    #title = models.CharField(max_length=200)
+    content = models.TextField()
+#END
 
 
 

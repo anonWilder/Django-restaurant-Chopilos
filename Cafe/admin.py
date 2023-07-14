@@ -1,13 +1,18 @@
 from django.contrib import admin
 from .models import *
+from .models import OfferSection
+from .models import SpecialSection
+from .models import AboutSection
 
 #New admin configurations by kenechukwu START
-from .models import OfferSection
 
 admin.site.register(OfferSection)
-
+admin.site.register(SpecialSection)
+admin.site.register(AboutSection)
 
 #END
+
+
 admin.site.site_header = "chopilosbyslippery"
 admin.site.site_title = "chopilosbyslippery"
 admin.site.index_title = "chopilosbyslippery"
