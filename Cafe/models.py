@@ -21,12 +21,21 @@ class SpecialSection(models.Model):
     description = models.TextField()
 #END
 
+#INDEX PAGE HEADSLIDER
+class SlideshowItem(models.Model):
+    image = models.ImageField(upload_to='slideshow_images/')
+    title = models.CharField(max_length=200)
+    text = models.TextField()
+#END
+
 
 #ABOUT PAGE TEXT
 class AboutSection(models.Model):
     #title = models.CharField(max_length=200)
     content = models.TextField()
 #END
+
+
 
 
 
