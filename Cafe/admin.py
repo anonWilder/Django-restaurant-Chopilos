@@ -3,12 +3,16 @@ from .models import *
 from .models import OfferSection
 from .models import SpecialSection
 from .models import AboutSection
-
+from .models import SlideshowItem
+from .models import ContactInfo
 #New admin configurations by kenechukwu START
 
 admin.site.register(OfferSection)
 admin.site.register(SpecialSection)
 admin.site.register(AboutSection)
+admin.site.register(SlideshowItem)
+admin.site.register(ContactInfo)
+
 
 #END
 

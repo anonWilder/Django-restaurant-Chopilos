@@ -375,6 +375,8 @@ class IndexView(View):
         latest = Item.objects.order_by('-timestamp')[0:4]
         offer_sections = OfferSection.objects.all()
         special_section = SpecialSection.objects.first()  # Retrieve the first SpecialSection object
+        slideshow_items = SlideshowItem.objects.all()
+        contact_info = ContactInfo.objects.first()  # Retrieve the first ContactInfo object
         context = {
             'counter': counter,
             'special': special,
@@ -383,6 +385,8 @@ class IndexView(View):
             'futureds': featured_post,
             'offer_sections': offer_sections,
             'special_section': special_section,
+            'slideshow_items': slideshow_items,
+            'contact_info': contact_info,
         }
         return render(request, 'index.html', context)
 

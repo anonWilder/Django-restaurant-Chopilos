@@ -28,7 +28,13 @@ class SlideshowItem(models.Model):
     text = models.TextField()
 #END
 
+#INDEX CONTACT US SECTION
+class ContactInfo(models.Model):
+    booking_phone = models.CharField(max_length=20)
+    location = models.CharField(max_length=200)
+    opening_hours = models.CharField(max_length=100)
 
+#END
 #ABOUT PAGE TEXT
 class AboutSection(models.Model):
     #title = models.CharField(max_length=200)
