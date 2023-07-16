@@ -85,6 +85,6 @@ class PostAdmin(admin.ModelAdmin):
 @admin.register(PostImage)
 class PostImageAdmin(admin.ModelAdmin):
     pass
-admin.site.register(DataCount)
+
 
 

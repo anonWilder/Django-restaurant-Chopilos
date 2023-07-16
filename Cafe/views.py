@@ -25,6 +25,7 @@ from HomePage.models import SlideshowItem
 from HomePage.models import ContactInfo
 from HomePage.models import UpcomingEvent
 from HomePage.models import Gallery
+from HomePage.models import DataCount
 from AboutUs.models import AboutSection
 from Menu.models import HotDeal
 import random

@@ -46,3 +46,12 @@ class Gallery(models.Model):
     def __str__(self):
         return "Gallery"
 #END
+
+#INDEX DATA COUNT
+class DataCount(models.Model):
+    name = models.CharField(max_length=1000)
+    count = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return self.name
+#END

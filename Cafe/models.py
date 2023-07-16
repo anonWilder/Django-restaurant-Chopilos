@@ -306,12 +306,6 @@ class Reservation(models.Model):
             'pk': self.pk
         })
 
-class DataCount(models.Model):
-    name = models.CharField(max_length=1000)
-    count = models.CharField(max_length=1000)
-
-    def __str__(self):
-        return self.name
     
 class Refund(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
