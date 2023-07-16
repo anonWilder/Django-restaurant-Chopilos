@@ -400,7 +400,6 @@ class IndexView(View):
             'special_section': special_section,
             'slideshow_items': slideshow_items,
             'contact_info': contact_info,
-            # 'upcoming_event': upcoming_event
             'upcoming_event': upcoming_event,
         }
         return render(request, 'index.html', context)
