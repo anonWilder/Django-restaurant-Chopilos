@@ -19,8 +19,14 @@ from django.conf import settings
 from django.core.mail import EmailMessage
 from django.core.mail import send_mail
 from django.views import View
-from .models import OfferSection
-from .models import SpecialSection
+from HomePage.models import OfferSection
+from HomePage.models import SpecialSection
+from HomePage.models import SlideshowItem
+from HomePage.models import ContactInfo
+from HomePage.models import UpcomingEvent
+from HomePage.models import Gallery
+from AboutUs.models import AboutSection
+from Menu.models import HotDeal
 import random
 import string
 # import Paystack
@@ -335,6 +341,8 @@ class BarView(ListView):
         tequila = Item.objects.filter(tequila=True).order_by('-timestamp')[0:8]
         champagne = Item.objects.filter(champagne=True).order_by('-timestamp')[0:10]
         latest = Item.objects.order_by('-timestamp')[0:6]
+        hot_deal = HotDeal.objects.first()  # Retrieve the first HotDeal object, you may need to modify the query based on your requirements
+   
         context = {
             'vape':vape,
             'champagne':champagne,
@@ -344,7 +352,8 @@ class BarView(ListView):
             'shakes_milk':shakes_milk,
             'soft_drinks':soft_drinks,
             'tequila':tequila,
-            'shisha': shisha
+            'shisha': shisha,
+            'hot_deal': hot_deal,
         }
         return render(request, 'bar_menu.html', context)
 
@@ -366,6 +375,7 @@ class BarView(ListView):
 #          return render(request, 'index.html', context)
 
 #NEW iNDEX CLASS CONFIGURATION BY KENECHUKWU
+
 class IndexView(View):
     def get(self, request, *args, **kwargs):
         featured_post = Item.objects.all()[:6]
@@ -377,6 +387,8 @@ class IndexView(View):
         special_section = SpecialSection.objects.first()  # Retrieve the first SpecialSection object
         slideshow_items = SlideshowItem.objects.all()
         contact_info = ContactInfo.objects.first()  # Retrieve the first ContactInfo object
+        # upcoming_event = UpcomingEvent.objects.all()
+        upcoming_event = UpcomingEvent.objects.first()  # Retrieve the first event object, you may need to modify the query based on your requirements
         context = {
             'counter': counter,
             'special': special,
@@ -387,10 +399,10 @@ class IndexView(View):
             'special_section': special_section,
             'slideshow_items': slideshow_items,
             'contact_info': contact_info,
+            # 'upcoming_event': upcoming_event
+            'upcoming_event': upcoming_event,
         }
         return render(request, 'index.html', context)
-
-
 
 #END
 

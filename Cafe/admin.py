@@ -1,20 +1,7 @@
 from django.contrib import admin
 from .models import *
-from .models import OfferSection
-from .models import SpecialSection
-from .models import AboutSection
-from .models import SlideshowItem
-from .models import ContactInfo
-#New admin configurations by kenechukwu START
-
-admin.site.register(OfferSection)
-admin.site.register(SpecialSection)
-admin.site.register(AboutSection)
-admin.site.register(SlideshowItem)
-admin.site.register(ContactInfo)
 
 
-#END
 
 
 admin.site.site_header = "chopilosbyslippery"
@@ -84,7 +71,6 @@ admin.site.register(UserProfile)
 admin.site.register(Category)
 admin.site.register(contactUs)
 admin.site.register(Reservation)
-admin.site.register(Gallery)
 
 class PostImageAdmin(admin.StackedInline):
     model = PostImage

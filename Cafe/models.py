@@ -8,57 +8,6 @@ from users.models import Profile as profile
 
 #New model configurations by kenechukwu
 
-#INDEX PAGE OFFER SECTION
-class OfferSection(models.Model):
-    name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='offer_images/')
-#END
-
-#INDEX PAGE SPECIAL SECTION
-class SpecialSection(models.Model):
-    image = models.ImageField(upload_to='special_images/')
-    title = models.CharField(max_length=100)
-    description = models.TextField()
-#END
-
-#INDEX PAGE HEADSLIDER
-class SlideshowItem(models.Model):
-    image = models.ImageField(upload_to='slideshow_images/')
-    title = models.CharField(max_length=200)
-    text = models.TextField()
-#END
-
-#INDEX CONTACT US SECTION
-class ContactInfo(models.Model):
-    booking_phone = models.CharField(max_length=20)
-    location = models.CharField(max_length=200)
-    opening_hours = models.CharField(max_length=100)
-
-#END
-#ABOUT PAGE TEXT
-class AboutSection(models.Model):
-    #title = models.CharField(max_length=200)
-    content = models.TextField()
-#END
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -134,7 +83,7 @@ class Item(models.Model):
     slug = models.SlugField(max_length=250, unique=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     description = models.TextField()
-    image = models.CharField(blank=True,max_length=850,null=True,default="/static/images/banner3.png")
+    #image = models.CharField(blank=True,max_length=850,null=True,default="/static/images/banner3.png")
     # breakfast = models.BooleanField(default=False)
     protein = models.BooleanField(default=False)
     special = models.BooleanField(default=False)
@@ -151,6 +100,7 @@ class Item(models.Model):
     grills = models.BooleanField(default=False)
     african_soup = models.BooleanField(default=False)
     dessert = models.BooleanField(default=False)
+    dish_image = models.ImageField(upload_to='dish_image/')
 
     # this are the bar menu listed
 
@@ -309,11 +259,6 @@ class contactUs(models.Model):
     def __str__(self):
         return self.email
 
-class Gallery(models.Model):
-    gallery = models.ImageField()
-    timestamp = models.DateTimeField(auto_now_add=True)
-    def __str__(self):
-        return "Gallery"
 
 class Event(models.Model):
     image = models.ImageField()

@@ -31,10 +31,9 @@
             {% for iteam in breakfast %}
                 <div class="offer-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <!-- {% if iteam.image %}
-                        <div class="image"><a href="{{iteam.get_absolute_url}}">
-                            <img style="width:270px;height:290px" src="{{iteam.image.url}}" alt=""></a></div>
-                        {% endif %} -->
+                        <div class="image">
+                            <a href="{{iteam.get_absolute_url}}"><img src="{{ iteam.dish_image.url }}" alt=""></a>
+                        </div>
                         <h4><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h4>
                         <div class="text desc">{{iteam.description|slice:":65"}}</div>
                         <div class="price">₦{{iteam.preview_price}}</div>
@@ -154,9 +153,9 @@
                 <div class="offer-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="image">
-                             <!-- {% if iteam.image %}
-                            <a href="#"><img src="{{iteam.image.url}}" alt=""></a>
-                            {% endif %} -->
+                          
+                            <a href="{{iteam.get_absolute_url}}"><img src="{{ iteam.dish_image.url }}" alt=""></a>
+                        
                         </div>
                         <h4><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h4>
                         <div class="text desc">{{iteam.description|slice:":65"}}.</div>
@@ -241,7 +240,7 @@
                             <div class="inner-box">
                                 <div class="dish-image">
                                     <a href="{{iteam.get_absolute_url}}">
-                                    <img src="{% static 'images/icons/shef.png' %}" alt=""></a>
+                                    <img src="{{ iteam.dish_image.url }}" alt=""></a>
                                 </div>
                                 <div class="title clearfix"><div class="ttl clearfix"><h5><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h5></div><div class="price">
                                      {%if iteam.discount_price %}
@@ -266,7 +265,7 @@
                             <div class="inner-box">
                                 <div class="dish-image">
                                     <a href="{{iteam.get_absolute_url}}">
-                                    <img src="{% static 'images/icons/shef.png' %}" alt=""></a>
+                                    <img src="{{ iteam.dish_image.url }}" alt=""></a>
                                 </div>
                                 <div class="title clearfix"><div class="ttl clearfix"><h5><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h5></div><div class="price">
                                      {%if iteam.discount_price %}
@@ -302,9 +301,9 @@
             <div class="offer-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12">
                 <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
                     <div class="image">
-                         <!-- {% if iteam.image %}
-                        <a href="#"><img src="{{iteam.image.url}}" alt=""></a>
-                        {% endif %} -->
+                          
+                        <a href="{{iteam.get_absolute_url}}"><img src="{{ iteam.dish_image.url }}" alt=""></a>
+                    
                     </div>
                     <h4><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h4>
                     <div class="text desc">{{iteam.description|slice:":65"}}.</div>

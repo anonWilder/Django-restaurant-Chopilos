@@ -39,10 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Cafe',
+    'HomePage',
+    'AboutUs',
+    'Menu',
     'users',
     'django_countries',
     'crispy_forms',
     'crispy_bootstrap5'
+    
 ]
 
 MIDDLEWARE = [
@@ -199,7 +203,7 @@ JAZZMIN_SETTINGS = {
     "site_logo": "/images/logo.png",
 
     # Logo to use for your site, must be present in static files, used for login form logo (defaults to site_logo)
-    "login_logo": "/images/logoss.png",
+    "login_logo": "/images/adminlogin.png",
 
     # Logo to use for login form in dark themes (defaults to login_logo)
     "login_logo_dark": None,
@@ -211,7 +215,7 @@ JAZZMIN_SETTINGS = {
     "site_icon": None,
 
     # Welcome text on the login screen
-    "welcome_sign": "Welcome to chopilosbySlippery",
+    "welcome_sign": "Welcome to ChopilosbySlippery",
 
     # Copyright on the footer
     "copyright": "ChopilosbySlippery®",

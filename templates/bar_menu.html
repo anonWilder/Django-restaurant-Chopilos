@@ -2,292 +2,312 @@
 {% load static %}
 {% block content %}
 
-   
-    <!-- Inner Banner Section -->
-    <section class="inner-banner">
-        <div class="image-layer" style="background-image: url({% static 'images/background/banner-image-2.jpg' %});"></div>
-        <div class="auto-container">
-            <div class="inner">
-                <div class="subtitle"><span>Sweet & amazing</span></div>
-                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
-                <h1 class="larg"><span>Bar Menu</span></h1>
-            </div>
-        </div>
-    </section>
-    <!--End Banner Section -->
 
-    <!--Special Offer Section-->
-    <section class="special-offer-two">
-        <div class="left-bg"><img src="{% static 'images/background/bg-20.png' %}" alt="" title=""></div>
-        <div class="right-bg"><img src="{% static 'images/background/bg-19.png' %}" alt="" title=""></div>
-        <div class="auto-container">
-            <div class="title-box centered">
-                <div class="subtitle"><span>Cocktails</span></div>
-                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
-                <h2 class="larg">Cocktails Menu</h2>
-            </div>
-            <div class="row clearfix">
-                <!--Item-->
+<!-- Inner Banner Section -->
+<section class="inner-banner">
+    <div class="image-layer" style="background-image: url({% static 'images/background/banner-image-2.jpg' %});"></div>
+    <div class="auto-container">
+        <div class="inner">
+            <div class="subtitle"><span>Sweet & amazing</span></div>
+            <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+            <h1 class="larg"><span>Bar Menu</span></h1>
+        </div>
+    </div>
+</section>
+<!--End Banner Section -->
+
+<!--Special Offer Section-->
+<section class="special-offer-two">
+    <div class="left-bg"><img src="{% static 'images/background/bg-20.png' %}" alt="" title=""></div>
+    <div class="right-bg"><img src="{% static 'images/background/bg-19.png' %}" alt="" title=""></div>
+    <div class="auto-container">
+        <div class="title-box centered">
+            <div class="subtitle"><span>Cocktails</span></div>
+            <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+            <h2 class="larg">Cocktails Menu</h2>
+        </div>
+        <div class="row clearfix">
+            <!--Item-->
             {% for iteam in cocktails %}
-                <div class="offer-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <!-- {% if iteam.image %}
-                        <div class="image"><a href="{{iteam.get_absolute_url}}">
-                            <img style="width:270px;height:290px" src="{{iteam.image.url}}" alt=""></a></div>
-                        {% endif %} -->
-                        <h4><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h4>
-                        <div class="text desc">{{iteam.description|slice:":65"}}</div>
-                        <div class="price">₦{{iteam.preview_price}}</div>
-                    </div>
+            <div class="offer-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
+
+                    <div class="image"><a href="{{iteam.get_absolute_url}}">
+                            <img style="width:270px;height:290px" src="{{ iteam.dish_image.url }}" alt=""></a></div>
+
+                    <h4><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h4>
+                    <div class="text desc">{{iteam.description|slice:":65"}}</div>
+                    <div class="price">₦{{iteam.preview_price}}</div>
                 </div>
+            </div>
             {% endfor %}
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
- 
 
 
-    <!--Menu Section-->
-    <section class="menu-one">
-        <div class="right-bg"><img src="{% static 'images/background/bg-16.png' %}" alt="" title=""></div>
-        <div class="auto-container">
-            <div class="title-box centered">
-                <div class="subtitle"><span>Mocktails MENU</span></div>
-                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
-                <h2 class="larg">Mocktails</h2>
-            </div>
 
-            <div class="row clearfix">
-                <div class="image-col col-lg-7 col-md-12 col-sm-12">
-                    <div class="inner">
-                       <!--  <div class="image"><img src="{% static 'images/herbs.webp' %}" alt=""></div> -->
-                        <div class="image"><img src="{% static 'images/3d.jpeg' %}" alt=""></div>
-                    </div>
+<!--Menu Section-->
+<section class="menu-one">
+    <div class="right-bg"><img src="{% static 'images/background/bg-16.png' %}" alt="" title=""></div>
+    <div class="auto-container">
+        <div class="title-box centered">
+            <div class="subtitle"><span>Mocktails MENU</span></div>
+            <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+            <h2 class="larg">Mocktails</h2>
+        </div>
+
+        <div class="row clearfix">
+            <div class="image-col col-lg-7 col-md-12 col-sm-12">
+                <div class="inner">
+                    <!--  <div class="image"><img src="{% static 'images/herbs.webp' %}" alt=""></div> -->
+                    <div class="image"><img src="{% static 'images/3d.jpeg' %}" alt=""></div>
                 </div>
-                <div class="menu-col col-lg-5 col-md-12 col-sm-12">
-                    <div class="inner">
-                        <!--Block-->
-                        {% for iteam in mocktails %}
-                        <div class="dish-block">
-                            <div class="inner-box">
-                                <div class="title clearfix"><div class="ttl clearfix"><h5><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h5></div>
+            </div>
+            <div class="menu-col col-lg-5 col-md-12 col-sm-12">
+                <div class="inner">
+                    <!--Block-->
+                    {% for iteam in mocktails %}
+                    <div class="dish-block">
+                        <div class="inner-box">
+                            <div class="title clearfix">
+                                <div class="ttl clearfix">
+                                    <h5><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h5>
+                                </div>
                                 <div class="price">
-                                     {%if iteam.discount_price %}
-                                <span class="old"><del>₦{{iteam.preview_price}}</del></span>
-                                 <span class="new">₦{{iteam.discount_price}}</span>
-                                {% else %}
-                                <span class="new">₦{{iteam.preview_price}}</span>
-                                {% endif %}
-                                    
+                                    {%if iteam.discount_price %}
+                                    <span class="old"><del>₦{{iteam.preview_price}}</del></span>
+                                    <span class="new">₦{{iteam.discount_price}}</span>
+                                    {% else %}
+                                    <span class="new">₦{{iteam.preview_price}}</span>
+                                    {% endif %}
+
                                 </div>
                             </div>
-                                <div class="text desc"><a href="{{iteam.get_absolute_url}}">{{iteam.description|slice:":65"}}.</a></div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                        <!--Block-->
-                    
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--Menu Section-->
-    <section class="menu-one alternate">
-        <div class="left-bg"><img src="{% static 'images/background/bg-17.png' %}" alt="" title=""></div>
-        <div class="right-bg-2"><img src="{% static 'images/background/bg-18.png' %}" alt="" title=""></div>
-        <div class="auto-container">
-            <div class="title-box centered">
-                <div class="subtitle"><span>Milk Shakes</span></div>
-                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
-                <h2 class="larg">Milk Shakes</h2>
-            </div>
-
-            <div class="row clearfix">
-                <div class="image-col col-lg-7 col-md-12 col-sm-12">
-                    <div class="inner">
-                <!--         <div class="image"><img src="{% static 'images/milk.jpg' %}" alt=""></div> -->
-                <div class="image"><img src="{% static 'images/4d.jpeg' %}" alt=""></div>
-                    </div>
-                </div>
-                <div class="menu-col col-lg-5 col-md-12 col-sm-12">
-                    <div class="inner">
-                        <!--Block-->
-                        {% for iteam in shakes_milk %}
-                        <div class="dish-block">
-                            <div class="inner-box">
-                                <div class="title clearfix"><div class="ttl clearfix"><h5><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h5></div><div class="price">
-                                      {%if iteam.discount_price %}
-                                <span class="old"><del>₦{{iteam.preview_price}}</del></span>
-                                 <span class="new">₦{{iteam.discount_price}}</span>
-                                {% else %}
-                                <span class="new">₦{{iteam.preview_price}}</span>
-                                {% endif %}
-                                    
-                                </div></div>
-                                <div class="text desc"><a href="{{iteam.get_absolute_url}}">{{iteam.description|slice:":65"}}.</a></div>
-                            </div>
-                        </div>
-                          {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--Special Offer Section-->
-    <section class="special-offer-two">
-        <div class="left-bg"><img src="{% static 'images/background/bg-20.png' %}" alt="" title=""></div>
-        <div class="right-bg"><img src="{% static 'images/background/bg-19.png' %}" alt="" title=""></div>
-        <div class="auto-container">
-            <div class="title-box centered">
-                <div class="subtitle"><span>Slippery Signatures</span></div>
-                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
-                <h2 class="larg">Slippery Signatures Menu</h2>
-            </div>
-            <div class="row clearfix">
-                <!--Item-->
-                 {% for iteam in slippery_signatures %}
-                <div class="offer-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
-                        <div class="image">
-                             <!-- {% if iteam.image %}
-                            <a href="#"><img src="{{iteam.image.url}}" alt=""></a>
-                            {% endif %} -->
-                        </div>
-                        <h4><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h4>
-                        <div class="text desc">{{iteam.description|slice:":65"}}.</div>
-                        <div class="price">
-                         {%if iteam.discount_price %}
-                                <span class="old"><del>₦{{iteam.preview_price}}</del></span>
-                                 <span class="new">₦{{iteam.discount_price}}</span>
-                                {% else %}
-                                <span class="new">₦{{iteam.preview_price}}</span>
-                                {% endif %}
-                    </div>
-                    </div>
-                </div>
-
-                  {% endfor %}
-         
-
-            </div>
-        </div>
-    </section>
-
-     <!--Chef Selection Section-->
-    <section class="chef-selection">
-        <div class="auto-container">
-            <div class="outer-container">
-                <div class="row clearfix">
-                    <!--Col-->
-                    {% for iteam in shisha %}
-                    <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                        <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
-                           {% if iteam.image %}
-                            <div class="image-layer" style="background-image: url({{iteam.image}});"></div>
-                            <div class="image"><img src="{{iteam.image}}" alt=""></div>
-                           {% endif %}  
-                        </div>
-                    </div>
-                    <!--Col-->
-                    
-                    <div class="content-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                        <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
-                            <div class="title-box">
-                                <span class="badge-icon">
-                                    <img src="{% static 'images/resource/badge-2.png' %}" alt="{{iteam.title}}" title=""></span>
-                                <!-- <div class="subtitle"><span>chef selection</span></div> -->
-                                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
-                                <h3>{{iteam.title}}</h3>
-                                <div class="text">{{iteam.description|slice:":65"}}</div>
-                            </div>
-                            <div class="price">
-                               {%if iteam.discount_price %}
-                                <span class="old"><del>₦{{iteam.preview_price}}</del></span>
-                                 <span class="new">₦{{iteam.discount_price}}</span>
-                                {% else %}
-                                <span class="new">₦{{iteam.preview_price}}</span>
-                                {% endif %}
-                             </div>
+                            <div class="text desc"><a
+                                    href="{{iteam.get_absolute_url}}">{{iteam.description|slice:":65"}}.</a></div>
                         </div>
                     </div>
                     {% endfor %}
+                    <!--Block-->
 
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
+<!--Menu Section-->
+<section class="menu-one alternate">
+    <div class="left-bg"><img src="{% static 'images/background/bg-17.png' %}" alt="" title=""></div>
+    <div class="right-bg-2"><img src="{% static 'images/background/bg-18.png' %}" alt="" title=""></div>
+    <div class="auto-container">
+        <div class="title-box centered">
+            <div class="subtitle"><span>Milk Shakes</span></div>
+            <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+            <h2 class="larg">Milk Shakes</h2>
+        </div>
 
-    <!--Menu Section-->
-    <section class="menu-two">
-        <div class="left-bg"><img src="{% static 'images/background/bg-20.png' %}" alt="" title=""></div>
-        <div class="auto-container">
-            <div class="title-box centered">
-                <div class="subtitle"><span>Soft Drinks / Tequila</span></div>
-                <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
-                <h2 class="larg">Soft Drinks / Tequila Menu</h2>
+        <div class="row clearfix">
+            <div class="image-col col-lg-7 col-md-12 col-sm-12">
+                <div class="inner">
+                    <!--         <div class="image"><img src="{% static 'images/milk.jpg' %}" alt=""></div> -->
+                    <div class="image"><img src="{% static 'images/4d.jpeg' %}" alt=""></div>
+                </div>
             </div>
+            <div class="menu-col col-lg-5 col-md-12 col-sm-12">
+                <div class="inner">
+                    <!--Block-->
+                    {% for iteam in shakes_milk %}
+                    <div class="dish-block">
+                        <div class="inner-box">
+                            <div class="title clearfix">
+                                <div class="ttl clearfix">
+                                    <h5><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h5>
+                                </div>
+                                <div class="price">
+                                    {%if iteam.discount_price %}
+                                    <span class="old"><del>₦{{iteam.preview_price}}</del></span>
+                                    <span class="new">₦{{iteam.discount_price}}</span>
+                                    {% else %}
+                                    <span class="new">₦{{iteam.preview_price}}</span>
+                                    {% endif %}
+
+                                </div>
+                            </div>
+                            <div class="text desc"><a
+                                    href="{{iteam.get_absolute_url}}">{{iteam.description|slice:":65"}}.</a></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Special Offer Section-->
+<section class="special-offer-two">
+    <div class="left-bg"><img src="{% static 'images/background/bg-20.png' %}" alt="" title=""></div>
+    <div class="right-bg"><img src="{% static 'images/background/bg-19.png' %}" alt="" title=""></div>
+    <div class="auto-container">
+        <div class="title-box centered">
+            <div class="subtitle"><span>Slippery Signatures</span></div>
+            <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+            <h2 class="larg">Slippery Signatures Menu</h2>
+        </div>
+        <div class="row clearfix">
+            <!--Item-->
+            {% for iteam in slippery_signatures %}
+            <div class="offer-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
+                    <div class="image">
+                        <a href="{{iteam.get_absolute_url}}"><img src="{{ iteam.dish_image.url }}" alt=""></a>
+                    </div>
+                    <h4><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h4>
+                    <div class="text desc">{{iteam.description|slice:":65"}}.</div>
+                    <div class="price">
+                        {%if iteam.discount_price %}
+                        <span class="old"><del>₦{{iteam.preview_price}}</del></span>
+                        <span class="new">₦{{iteam.discount_price}}</span>
+                        {% else %}
+                        <span class="new">₦{{iteam.preview_price}}</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+
+        </div>
+    </div>
+</section>
+
+<!--Chef Selection Section-->
+<section class="chef-selection">
+    <div class="auto-container">
+        <div class="outer-container">
             <div class="row clearfix">
-                <div class="menu-col col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner">
-                        <!--Block-->
-                         {% for iteam in soft_drinks %}
-                        <div class="dish-block">
-                            <div class="inner-box">
-                                <div class="dish-image">
-                                    <a href="{{iteam.get_absolute_url}}">
-                                    <img src="{% static 'images/icons/shef.png' %}" alt=""></a>
-                                </div>
-                                <div class="title clearfix"><div class="ttl clearfix"><h5><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h5></div><div class="price">
-                                     {%if iteam.discount_price %}
-                                <span class="old"><del>₦{{iteam.preview_price}}</del></span>
-                                 <span class="new">₦{{iteam.discount_price}}</span>
-                                {% else %}
-                                <span class="new">₦{{iteam.preview_price}}</span>
-                                {% endif %}
-                                </div></div>
-                                <div class="text desc"><a href="#">{{iteam.description|slice:":65"}}.</a></div>
-                            </div>
-                        </div>
-                        {% endfor %}
+                <!--Col-->
+                {% for iteam in shisha %}
+                <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        {% comment %} {% if iteam.image %} {% endcomment %}
+                        <div class="image-layer" style="background-image: url({{ iteam.dish_image.url }});"></div>
+                        <div class="image"><img src="{{ iteam.dish_image.url }}" alt=""></div>
+                        {% comment %} {% endif %} {% endcomment %}
                     </div>
                 </div>
-                <div class="menu-col col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner">
-                        <!--Block-->
-                      {% for iteam in tequila %}
-                        <div class="dish-block"> 
-                            
-                            <div class="inner-box">
-                                <div class="dish-image">
-                                    <a href="{{iteam.get_absolute_url}}">
-                                    <img src="{% static 'images/icons/shef.png' %}" alt=""></a>
-                                </div>
-                                <div class="title clearfix"><div class="ttl clearfix"><h5><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h5></div><div class="price">
-                                     {%if iteam.discount_price %}
-                                <span class="old"><del>₦{{iteam.preview_price}}</del></span>
-                                 <span class="new">₦{{iteam.discount_price}}</span>
-                                {% else %}
-                                <span class="new">₦{{iteam.preview_price}}</span>
-                                {% endif %}
-                                </div></div>
-                                <div class="text desc"><a href="#">{{iteam.description|slice:":65"}}.</a></div>
-                            </div>
+                <!--Col-->
+
+                <div class="content-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                        <div class="title-box">
+                            <span class="badge-icon">
+                                <img src="{% static 'images/resource/badge-2.png' %}" alt="{{iteam.title}}"
+                                    title=""></span>
+                            <!-- <div class="subtitle"><span>chef selection</span></div> -->
+                            <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt=""
+                                    title=""></div>
+                            <h3>{{iteam.title}}</h3>
+                            <div class="text">{{iteam.description|slice:":65"}}</div>
                         </div>
-                        {% endfor %}
+                        <div class="price">
+                            {%if iteam.discount_price %}
+                            <span class="old"><del>₦{{iteam.preview_price}}</del></span>
+                            <span class="new">₦{{iteam.discount_price}}</span>
+                            {% else %}
+                            <span class="new">₦{{iteam.preview_price}}</span>
+                            {% endif %}
+                        </div>
                     </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Menu Section-->
+<section class="menu-two">
+    <div class="left-bg"><img src="{% static 'images/background/bg-20.png' %}" alt="" title=""></div>
+    <div class="auto-container">
+        <div class="title-box centered">
+            <div class="subtitle"><span>Soft Drinks / Tequila</span></div>
+            <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+            <h2 class="larg">Soft Drinks / Tequila Menu</h2>
+        </div>
+        <div class="row clearfix">
+            <div class="menu-col col-lg-6 col-md-12 col-sm-12">
+                <div class="inner">
+                    <!--Block-->
+                    {% for iteam in soft_drinks %}
+                    <div class="dish-block">
+                        <div class="inner-box">
+                            <div class="dish-image">
+                                <a href="{{iteam.get_absolute_url}}">
+                                    <img src="{{ iteam.dish_image.url }}" alt=""></a>
+                            </div>
+                            <div class="title clearfix">
+                                <div class="ttl clearfix">
+                                    <h5><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h5>
+                                </div>
+                                <div class="price">
+                                    {%if iteam.discount_price %}
+                                    <span class="old"><del>₦{{iteam.preview_price}}</del></span>
+                                    <span class="new">₦{{iteam.discount_price}}</span>
+                                    {% else %}
+                                    <span class="new">₦{{iteam.preview_price}}</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="text desc"><a href="#">{{iteam.description|slice:":65"}}.</a></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="menu-col col-lg-6 col-md-12 col-sm-12">
+                <div class="inner">
+                    <!--Block-->
+                    {% for iteam in tequila %}
+                    <div class="dish-block">
+
+                        <div class="inner-box">
+                            <div class="dish-image">
+                                <a href="{{iteam.get_absolute_url}}">
+                                    <img src="{{ iteam.dish_image.url }}" alt=""></a>
+                            </div>
+                            <div class="title clearfix">
+                                <div class="ttl clearfix">
+                                    <h5><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h5>
+                                </div>
+                                <div class="price">
+                                    {%if iteam.discount_price %}
+                                    <span class="old"><del>₦{{iteam.preview_price}}</del></span>
+                                    <span class="new">₦{{iteam.discount_price}}</span>
+                                    {% else %}
+                                    <span class="new">₦{{iteam.preview_price}}</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="text desc"><a href="#">{{iteam.description|slice:":65"}}.</a></div>
+                        </div>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-  <!--Special Offer Section-->
-  <section class="special-offer-two">
+<!--Special Offer Section-->
+<section class="special-offer-two">
     <div class="left-bg"><img src="{% static 'images/background/bg-20.png' %}" alt="" title=""></div>
     <div class="right-bg"><img src="{% static 'images/background/bg-19.png' %}" alt="" title=""></div>
     <div class="auto-container">
@@ -298,29 +318,27 @@
         </div>
         <div class="row clearfix">
             <!--Item-->
-             {% for iteam in champagne %}
+            {% for iteam in champagne %}
             <div class="offer-block-three col-xl-3 col-lg-4 col-md-6 col-sm-12">
                 <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
                     <div class="image">
-                         <!-- {% if iteam.image %}
-                        <a href="#"><img src="{{iteam.image.url}}" alt=""></a>
-                        {% endif %} -->
+                        <a href="{{iteam.get_absolute_url}}"><img src="{{ iteam.dish_image.url }}" alt=""></a>
                     </div>
                     <h4><a href="{{iteam.get_absolute_url}}">{{iteam.title}}</a></h4>
                     <div class="text desc">{{iteam.description|slice:":65"}}.</div>
                     <div class="price">
-                     {%if iteam.discount_price %}
-                            <span class="old"><del>₦{{iteam.preview_price}}</del></span>
-                             <span class="new">₦{{iteam.discount_price}}</span>
-                            {% else %}
-                            <span class="new">₦{{iteam.preview_price}}</span>
-                            {% endif %}
-                </div>
+                        {%if iteam.discount_price %}
+                        <span class="old"><del>₦{{iteam.preview_price}}</del></span>
+                        <span class="new">₦{{iteam.discount_price}}</span>
+                        {% else %}
+                        <span class="new">₦{{iteam.preview_price}}</span>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
 
-              {% endfor %}
-     
+            {% endfor %}
+
 
         </div>
     </div>
@@ -333,32 +351,34 @@
                 {% for iteam in vape %}
                 <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
-                       {% if iteam.image %}
-                        <div class="image-layer" style="background-image: url({{iteam.image}});"></div>
-                        <div class="image"><img src="{{iteam.image}}" alt=""></div>
-                       {% endif %}  
+                        {% comment %} {% if iteam.image %} {% endcomment %}
+                        <div class="image-layer" style="background-image: url({{ iteam.dish_image.url }});"></div>
+                        <div class="image"><img src="{{ iteam.dish_image.url }}" alt=""></div>
+                        {% comment %} {% endif %} {% endcomment %}
                     </div>
                 </div>
                 <!--Col-->
-                
+
                 <div class="content-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="title-box">
                             <span class="badge-icon">
-                                <img src="{% static 'images/resource/badge-2.png' %}" alt="{{iteam.title}}" title=""></span>
+                                <img src="{% static 'images/resource/badge-2.png' %}" alt="{{iteam.title}}"
+                                    title=""></span>
                             <!-- <div class="subtitle"><span>chef selection</span></div> -->
-                            <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt="" title=""></div>
+                            <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}" alt=""
+                                    title=""></div>
                             <h3>{{iteam.title}}</h3>
                             <div class="text">{{iteam.description|slice:":65"}}</div>
                         </div>
                         <div class="price">
-                           {%if iteam.discount_price %}
+                            {%if iteam.discount_price %}
                             <span class="old"><del>₦{{iteam.preview_price}}</del></span>
-                             <span class="new">₦{{iteam.discount_price}}</span>
+                            <span class="new">₦{{iteam.discount_price}}</span>
                             {% else %}
                             <span class="new">₦{{iteam.preview_price}}</span>
                             {% endif %}
-                         </div>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
@@ -368,7 +388,7 @@
     </div>
 </section>
 
-    <!-- Special Offer Section
+<!-- Special Offer Section
     <section class="special-offer-two">
         <div class="right-bg"><img src="{% static 'images/background/bg-24.png' %}" alt="" title=""></div>
         <div class="auto-container">
@@ -391,136 +411,173 @@
         </div>
     </section> -->
 
-    <!--Reservation Section-->
-    <section class="reserve-section style-two">
-        <div class="image-layer" style="background-image: url({% static 'images/background/image-10.jpg' %});"></div>
-        <div class="auto-container">
-            <div class="outer-box">
-                <div class="row clearfix">
-                    <div class="reserv-col col-lg-8 col-md-12 col-sm-12">
-                        <div class="inner">
-                            <div class="title">
-                                <h2 class="larg">Online Reservation</h2>
-                                <div class="request-info">Booking request <a href="#">0814 176 0134</a> or fill out the order form</div>
-                            </div>
-                            <div class="default-form reservation-form">
-                                <form method="post" action="">
-                                    {% csrf_token %} 
-                                    <div class="row clearfix">
-                                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                                            <div class="field-inner">
-                                                 <input type="text" name="name" value="" placeholder="Your Name" required="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                                            <div class="field-inner">
-                                               <input type="text" name="email" value="" placeholder="Your Email" required="">
-                                            </div>
-                                        </div>
-                                         <div class="form-group col-lg-4 col-md-6 col-sm-12">
-                                            <div class="field-inner">
-                                                <input type="text" name="phone" value="" placeholder="Phone Number" required="">
-                                            </div>
-                                        </div>
-                                       
-                                        <div class="form-group col-lg-4 col-md-6 col-sm-12">
-                                            <div class="field-inner">
-                                                <span class="alt-icon far fa-user"></span>
-                                                <select name="person" class="l-icon">
-                                                    <option value='1 Person'>1 Person</option>
-                                                    <option value='2 Person'>2 Person</option>
-                                                    <option value='3 Person'>3 Person</option>
-                                                    <option value='4 Person'>4 Person</option>
-                                                    <option value='5 Person'>5 Person</option>
-                                                    <option value='6 Person'>6 Person</option>
-                                                    <option value='7 Person'>7 Person</option>
-                                                </select>
-                                                <span class="arrow-icon far fa-angle-down"></span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-lg-4 col-md-6 col-sm-12">
-                                            <div class="field-inner">
-                                                <span class="alt-icon far fa-calendar"></span>
-                                                <input class="l-icon datepicker" type="text" name="date" value="" placeholder="DD-MM-YYYY" required readonly>
-                                                <span class="arrow-icon far fa-angle-down"></span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-lg-4 col-md-6 col-sm-12">
-                                            <div class="field-inner">
-                                                <span class="alt-icon far fa-clock"></span>
-                                                <select name="time" class="l-icon">
-                                                    <option>08 : 00 am</option>
-                                                    <option>09 : 00 am</option>
-                                                    <option>10 : 00 am</option>
-                                                    <option>11 : 00 am</option>
-                                                    <option>12 : 00 pm</option>
-                                                    <option>01 : 00 pm</option>
-                                                    <option>02 : 00 pm</option>
-                                                    <option>03 : 00 pm</option>
-                                                    <option>04 : 00 pm</option>
-                                                    <option>05 : 00 pm</option>
-                                                    <option>06 : 00 pm</option>
-                                                    <option>07 : 00 pm</option>
-                                                    <option>08 : 00 pm</option>
-                                                    <option>09 : 00 pm</option>
-                                                    <option>10 : 00 pm</option>
-                                                </select>
-                                                <span class="arrow-icon far fa-angle-down"></span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                                            <div class="field-inner">
-                                                <textarea name="massage" placeholder="Special Request" required=""></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                                            <div class="field-inner">
-                                                <button type="submit" class="theme-btn btn-style-one clearfix">
-                                                    <span class="btn-wrap">
-                                                        <span class="text-one">book a table</span>
-                                                        <span class="text-two">book a table</span>
-                                                    </span>
-                                                </button>
-                                            </div>
+<!--Reservation Section-->
+<section class="reserve-section style-two">
+    <div class="image-layer" style="background-image: url({% static 'images/background/image-10.jpg' %});"></div>
+    <div class="auto-container">
+        <div class="outer-box">
+            <div class="row clearfix">
+                <div class="reserv-col col-lg-8 col-md-12 col-sm-12">
+                    <div class="inner">
+                        <div class="title">
+                            <h2 class="larg">Online Reservation</h2>
+                            <div class="request-info">Booking request <a href="#">0814 176 0134</a> or fill out the
+                                order form</div>
+                        </div>
+                        <div class="default-form reservation-form">
+                            <form method="post" action="">
+                                {% csrf_token %}
+                                <div class="row clearfix">
+                                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                        <div class="field-inner">
+                                            <input type="text" name="name" value="" placeholder="Your Name" required="">
                                         </div>
                                     </div>
-                                </form>
+                                    <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                        <div class="field-inner">
+                                            <input type="text" name="email" value="" placeholder="Your Email"
+                                                required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-4 col-md-6 col-sm-12">
+                                        <div class="field-inner">
+                                            <input type="text" name="phone" value="" placeholder="Phone Number"
+                                                required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-lg-4 col-md-6 col-sm-12">
+                                        <div class="field-inner">
+                                            <span class="alt-icon far fa-user"></span>
+                                            <select name="person" class="l-icon">
+                                                <option value='1 Person'>1 Person</option>
+                                                <option value='2 Person'>2 Person</option>
+                                                <option value='3 Person'>3 Person</option>
+                                                <option value='4 Person'>4 Person</option>
+                                                <option value='5 Person'>5 Person</option>
+                                                <option value='6 Person'>6 Person</option>
+                                                <option value='7 Person'>7 Person</option>
+                                            </select>
+                                            <span class="arrow-icon far fa-angle-down"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-4 col-md-6 col-sm-12">
+                                        <div class="field-inner">
+                                            <span class="alt-icon far fa-calendar"></span>
+                                            <input class="l-icon datepicker" type="text" name="date" value=""
+                                                placeholder="DD-MM-YYYY" required readonly>
+                                            <span class="arrow-icon far fa-angle-down"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-4 col-md-6 col-sm-12">
+                                        <div class="field-inner">
+                                            <span class="alt-icon far fa-clock"></span>
+                                            <select name="time" class="l-icon">
+                                                <option>08 : 00 am</option>
+                                                <option>09 : 00 am</option>
+                                                <option>10 : 00 am</option>
+                                                <option>11 : 00 am</option>
+                                                <option>12 : 00 pm</option>
+                                                <option>01 : 00 pm</option>
+                                                <option>02 : 00 pm</option>
+                                                <option>03 : 00 pm</option>
+                                                <option>04 : 00 pm</option>
+                                                <option>05 : 00 pm</option>
+                                                <option>06 : 00 pm</option>
+                                                <option>07 : 00 pm</option>
+                                                <option>08 : 00 pm</option>
+                                                <option>09 : 00 pm</option>
+                                                <option>10 : 00 pm</option>
+                                            </select>
+                                            <span class="arrow-icon far fa-angle-down"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                        <div class="field-inner">
+                                            <textarea name="massage" placeholder="Special Request"
+                                                required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                        <div class="field-inner">
+                                            <button type="submit" class="theme-btn btn-style-one clearfix">
+                                                <span class="btn-wrap">
+                                                    <span class="text-one">book a table</span>
+                                                    <span class="text-two">book a table</span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="info-col col-lg-4 col-md-12 col-sm-12">
+                    <div class="inner">
+                        <div class="img-layer"
+                            style="background-image: url({% static 'images/background/image-11.jpg' %});"></div>
+                        <div class="title">
+                            <div class="subtitle">hot deal</div>
+                            <h5>Lunch & Dinner Specials</h5>
+                        </div>
+                        <div class="data">
+                            <div class="discount-info">
+                                <div class="s-ttl">up to</div>
+                                <div class="num">45%</div>
+                                <div class="s-ttl">discount</div>
+                            </div>
+                            <div class="instruction">
+                                <h6>• Non-refundable<h6> <br>
+                                <h6>• Not valid for online order</h6> <br>
+                                <h5>• Offer end on 25 Jan <h5><br>
+                            </div>
+                            <div class="link-box">
+                                <a href="/reservation/" class="theme-btn btn-style-one clearfix">
+                                    <span class="btn-wrap">
+                                        <span class="text-one">book now</span>
+                                        <span class="text-two">book now</span>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="info-col col-lg-4 col-md-12 col-sm-12">
-                        <div class="inner">
-                            <div class="img-layer" style="background-image: url({% static 'images/background/image-11.jpg' %});"></div>
-                            <div class="title">
-                                <div class="subtitle">hot deal</div>
-                                <h5>Lunch & Dinner Specials</h5>
+                </div> -->
+
+                <div class="info-col col-lg-4 col-md-12 col-sm-12">
+                    <div class="inner">
+                        <div class="img-layer" style="background-image: url({{ hot_deal.image.url }});"></div>
+                        <div class="title">
+                            <div class="subtitle">hot deal</div>
+                            <h5>{{ hot_deal.title }}</h5>
+                        </div>
+                        <div class="data">
+                            <div class="discount-info">
+                                <div class="s-ttl">up to</div>
+                                <div class="num">{{ hot_deal.discount }}%</div>
+                                <div class="s-ttl">discount</div>
                             </div>
-                            <div class="data">
-                                <div class="discount-info">
-                                    <div class="s-ttl">up to</div>
-                                    <div class="num">45%</div>
-                                    <div class="s-ttl">discount</div>
-                                </div>
-                                <div class="instruction">
-                                    • Not valid for online order <br>
-                                    • Non-refundable <br>
-                                    • Offer end on 25 Jan <br>
-                                </div>
-                                <div class="link-box">
-                                    <a href="/reservation/" class="theme-btn btn-style-one clearfix">
-                                        <span class="btn-wrap">
-                                            <span class="text-one">book now</span>
-                                            <span class="text-two">book now</span>
-                                        </span>
-                                    </a>
-                                </div>
+                            <div class="instruction">
+                                • Non-refundable <br>
+                                • Not valid for online order<br>
+                                • Offer end on {{ hot_deal.offer_end_period }}<br>
+                            </div>
+                            <div class="link-box">
+                                <a href="/reservation/" class="theme-btn btn-style-one clearfix">
+                                    <span class="btn-wrap">
+                                        <span class="text-one">book now</span>
+                                        <span class="text-two">book now</span>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
             </div>
+
         </div>
-    </section>
- 
+    </div>
+</section>
+
 {% endblock content %}

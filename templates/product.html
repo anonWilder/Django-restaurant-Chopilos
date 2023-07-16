@@ -5,14 +5,14 @@
    
     <!-- Inner Banner Section -->
     <section class="inner-banner">
-        <div class="image-layer" style="background-image: url(images/background/banner-image-2.jpg);"></div>
-        {% comment %} <div class="auto-container">
+        <div class="image-layer" style="background-image: url({% static 'images/background/banner-image-2.jpg' %});"></div>
+        <div class="auto-container">
             <div class="inner">
                 <div class="subtitle"><span>delicious & amazing</span></div>
                 <div class="pattern-image"><img src="images/icons/separator.svg" alt="" title=""></div>
-                <h1><span>Our Menu 2</span></h1>
+                <h1><span>{{object.title}}</span></h1>
             </div>
-        </div> {% endcomment %}
+        </div>
     </section>
     <!--End Banner Section -->
 
@@ -26,8 +26,8 @@
                     <!--Col-->
                     <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
                         <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
-                            <div class="image-layer" style="background-image: url({% static 'images/icons/shef.png' %});"></div>
-                            <div class="image"><img src="{% static 'images/icons/shef.png' %}" alt=""></div>
+                            <div class="image-layer" style="background-image: url({{ object.dish_image.url }});"></div>
+                            <div class="image"><img src="{{ object.dish_image.url }}" alt=""></div>
                         </div>
                     </div>
                     <!--Col-->

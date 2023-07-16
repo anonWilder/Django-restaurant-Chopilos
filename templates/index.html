@@ -51,12 +51,12 @@
                         <div class="content-box">
                             <div class="content">
                                 <div class="clearfix">
-                                    <div class="inner">
+                                    <div class="inner" style=" max-width: 500px;">
                                         <!-- <div class="subtitle"><span>delightful experience</span></div> -->
                                         <div class="pattern-image"><img src="{% static 'images/icons/separator.svg' %}"
                                                 alt="" title=""></div>
                                         <h1 class="larg"><span>{{ item.title }}</span></h1>
-                                        <div class="text">{{ item.text }}</div>
+                                        <div class="text" >{{ item.text }}</div>
                                         <div class="links-box wow fadeInUp" data-wow-delay="0ms"
                                             data-wow-duration="1500ms">
                                             <div class="link">
@@ -82,9 +82,11 @@
         </div>
     </div>
 
-    <div class="book-btn"><a href="/reservation/" class="theme-btn"><span class="icon"><img
-                    src="{% static 'images/resource/book-icon-1.png' %}" alt="" title=""></span><span class="txt">book a
-                table</span></a></div>
+    <div class="book-btn"><a href="/reservation/" class="theme-btn">
+        <span class="icon">
+            <img src="{% static 'images/resource/book-icon-1.png' %}" alt="" title="">
+        </span><span class="txt">book a table</span></a>
+    </div>
 </section>
 <!--End Banner Section -->
 
@@ -760,17 +762,14 @@
                         <div class="bl-inner">
                             <div class="content">
                                 <h3 style="color:black"></h3>
-
-
                                 <div class="link"><a href="/event" class="theme-btn"><span></span></a></div>
                             </div>
                         </div>
                     </div>
                     <div class="image-box">
                         <div class="image-layer"
-                            style="left: 100px;height: 89%;background-image: url({% static 'images/resource/featured-2.jpg' %});background-position: unset;">
+                            style="left: 100px; background-image: url({{ upcoming_event.image1.url }});background-position: unset;">
                         </div>
-                        <div class="image"><img src="{% static 'images/resource/featured-2.jpg' %}" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -788,13 +787,11 @@
                         align-items: center;">
                         <div class="bl-inner">
                             <div class="content">
-
                                 <h3 class="larg">Upcoming Events</h3>
-
                                 <div class="link" style="
                                     display: flex;
                                     justify-content: center;
-                                    align-items: center;"><a href="/menu" class="theme-btn"><span>join event</span></a>
+                                    align-items: center;"><a href="/event" class="theme-btn"><span>join event</span></a>
                                 </div>
                             </div>
                         </div>
@@ -815,9 +812,8 @@
                     </div>
                     <div class="image-box">
                         <div class="image-layer"
-                            style="left: -100px;background-image: url({% static 'images/resource/featured-3.jpg' %});">
+                            style="left: -100px;background-image: url({{ upcoming_event.image2.url }});">
                         </div>
-                        <div class="image"><img src="{% static 'images/resource/featured-3.jpg' %}" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -825,6 +821,7 @@
         </div>
     </div>
 </section>
+
 
 <!--Intro Section-->
 <section class="intro-section">

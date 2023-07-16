@@ -2,7 +2,12 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;family=Forum&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
 
+@font-face {
+    font-family: 'salty';
+    src: url(/var/www/resturant_web_application/static/fonts/salty-feathers.otf);
+}
 /*
     font-family: 'DM Sans', sans-serif;
     font-family: 'Forum', cursive;
@@ -20,8 +25,9 @@
 :root {
 
     /* #f25630 in decimal RGB */
-  --main-color: rgb(228,197,144);
-  
+/*  --main-color: rgb(228,197,144);*/
+  --main-color:   #228bc7;
+
   /* #ffffff in decimal RGB */
   --white-color:rgb(255,255,255);
     
@@ -477,7 +483,7 @@ h1,h2,h3,h4,h5,h6 {
     background:none;
     line-height: 1.20em;
     color:var(--heading-color);
-    font-family:var(--font-family-Forum);
+    font-family:'salty', sans-serif;
 }
 
 .theme_color{
@@ -596,13 +602,13 @@ figure{
     vertical-align: top;
     text-align: center;
     text-transform: uppercase;
-    color: var(--black-color);
+    color: #fff;
     letter-spacing: 3px;
     font-weight: 700;
     padding:11px 45px;
     font-size:var(--font-12);
-    background: var(--main-color);
-    border: 2px solid var(--main-color);
+    background: #228bc7;
+    border: 2px solid #228bc7;;
     border-radius: 0px;
     overflow: hidden;
     transition: all 0.3s ease 0s;
