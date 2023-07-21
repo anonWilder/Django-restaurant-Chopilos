@@ -32,7 +32,7 @@
 ***/
 
 .main-header{
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
@@ -156,8 +156,8 @@
 .fixed-header .header-upper{
   position: relative;
   /*top: 0;*/
-  background: #202020;
-  border-bottom-color: rgba(0,0,0,0.15);
+  /* background: #202020; */
+  /* border-bottom-color: rgba(0,0,0,0.15); */
 }
 
 .header-two.fixed-header .header-upper{
@@ -179,7 +179,7 @@
   position: relative;
   display: block;
   padding: 40px 0px;
-  margin-left:140px;
+  margin-left:-30px;
   transition: all 300ms ease;
   -moz-transition: all 300ms ease;
   -webkit-transition: all 300ms ease;
@@ -212,8 +212,8 @@
 .main-header .main-box .logo-box .logo img{
   position: relative;
   display: block;
-  height: 90px;
-    width: 200px;
+  height: 80px;
+  width: 100px;
   z-index: 1;
 }
 
@@ -862,8 +862,8 @@ body.visible-sidebar{
 
 .hidden-bar .inner-box .logo-box img{
   position:relative;
-  max-height: 90px;
-   height: 90px;
+  max-height: 400px;
+   height: 165px;
     width: 200px;
 }
 
@@ -1285,6 +1285,7 @@ body.visible-sidebar{
 
 .banner-section{
   position: relative;
+  /* opacity:0.2; */
   padding: 0 0;
   background: var(--black-color);
 }
@@ -1320,6 +1321,7 @@ body.visible-sidebar{
 .banner-section .slide-item .image-layer{
   position: absolute;
   left: 0;
+  opacity: 0.2;
   top: 0;
   width: 100%;
   height: 100%;
@@ -1849,7 +1851,8 @@ body.visible-sidebar{
   display: inline-block;
   vertical-align: top;
   font-size: var(--font-12);
-  color: var(--main-color);
+/*  color: var(--main-color);*/
+  color: #228bc7;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -1938,7 +1941,7 @@ body.visible-sidebar{
 .story-section .booking-info .bk-no{
   position: relative;
   font-size: var(--font-24);
-  color: var(--main-color);
+  color: #228bc7;
   line-height: 1em;
   margin-bottom: var(--margin-bottom-30);
 }
@@ -3251,8 +3254,10 @@ body.visible-sidebar{
 
 .featured-links .link-block .inner{
   position: relative;
+  opacity: 0.6;
   min-height: 100%;
-  background-color:var(--color-five);
+  background-image:url('/static/images/aboutuo.png');
+  /* background-image:url('/static/images/opacity.png'); */
 }
 
 .featured-links .link-block .text-block{
@@ -3278,7 +3283,7 @@ body.visible-sidebar{
 
 .featured-links .link-block .text-block .content{
   position: relative;
-  max-width: 300px;
+  /* max-width: 300px; */
   margin: 0 auto;
   padding-bottom: var(--padding-bottom-30);
   padding-top: var(--padding-top-30);
@@ -3375,6 +3380,7 @@ body.visible-sidebar{
   position: absolute;
   left: 0;
   top: 0;
+  margin-top: -185px;
   width: 100%;
   height: 100%;
   background-position: center center;
@@ -6460,7 +6466,7 @@ body.visible-sidebar{
 
 .location-block .inner-box .icon-box img{
   position: relative;
-  max-height: 127px;
+/*  max-height: 127px;*/
 }
 
 .location-block h4{
@@ -7112,7 +7118,14 @@ body.visible-sidebar{
 .hamburger:hover span {
   width: 100%;
 }
+@media screen {
+  .owl-item{
+    height: 100%;
+    width: 100%;
+  }
+}
 
+@media (max-width:100%){.owl-item{height:100%}}
 html:not(.body-menu-opened) .hamburger .top-bun {
   -webkit-animation: burger-hover 1s infinite ease-in-out alternate forwards 200ms;
           animation: burger-hover 1s infinite ease-in-out alternate forwards 200ms;
